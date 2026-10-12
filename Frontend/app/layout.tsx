@@ -1,29 +1,22 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 // =============================================
-// POLICES
+// POLICE — Geist (fichiers locaux, zéro requête externe)
+// GeistVF.woff = variable font (toutes les graisses en un seul fichier)
 // =============================================
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const geist = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-geist",
   display: "swap",
-  weight: ["300", "400", "500", "600", "700"],
-  fallback: ["system-ui", "Arial", "sans-serif"],
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta",
-  display: "swap",
-  weight: ["500", "600", "700", "800"],
-  fallback: ["Inter", "system-ui", "Arial", "sans-serif"],
+  fallback: ["system-ui", "-apple-system", "Arial", "sans-serif"],
+  // Variable font : plage de graisses 100–900
+  style: "normal",
 });
 
 // =============================================
 // MÉTADONNÉES SEO
-// TODO: Mettre à jour le nom de domaine quand il sera confirmé
 // =============================================
 export const metadata: Metadata = {
   metadataBase: new URL("https://seedly.tech"), // TODO: Remplacer par le vrai domaine
@@ -50,10 +43,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-    },
+    googleBot: { index: true, follow: true },
   },
   openGraph: {
     type: "website",
@@ -64,7 +54,7 @@ export const metadata: Metadata = {
       "Plantez l'idée. Faites grandir votre activité. Seedly accompagne les entreprises guinéennes dans leur transformation digitale.",
     images: [
       {
-        url: "/images/og-seedly.png", // TODO: Créer l'image Open Graph
+        url: "/images/og-seedly.png",
         width: 1200,
         height: 630,
         alt: "Seedly Technology & Apps",
@@ -107,11 +97,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={`${inter.variable} ${plusJakarta.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="fr" className={geist.variable} suppressHydrationWarning>
       <body className="bg-dark text-neutral-100 antialiased min-h-screen">
         {children}
       </body>

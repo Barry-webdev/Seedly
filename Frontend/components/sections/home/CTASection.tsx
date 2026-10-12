@@ -40,7 +40,7 @@ export const CTASection: React.FC = () => {
               <h2
                 id="cta-title"
                 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight text-balance"
-                style={{ fontFamily: "var(--font-plus-jakarta), sans-serif" }}
+                style={{ letterSpacing: "-0.025em" }}
               >
                 Votre projet mérite d&apos;être réalisé.
               </h2>

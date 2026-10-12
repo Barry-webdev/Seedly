@@ -44,8 +44,13 @@ export const HeroSection: React.FC = () => {
           {/* Titre principal */}
           <h1
             id="hero-title"
-            className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-display-xl font-bold text-white leading-tight text-balance mb-6"
-            style={{ fontFamily: "var(--font-plus-jakarta), sans-serif" }}
+            className="text-center font-bold text-white leading-tight text-balance mb-6"
+            style={{
+              fontSize: "clamp(2.2rem, 6vw, 4rem)",
+              lineHeight: 1.08,
+              letterSpacing: "-0.03em",
+              fontWeight: 700,
+            }}
           >
             Votre{" "}
             <span className="text-gradient">présence digitale</span>
