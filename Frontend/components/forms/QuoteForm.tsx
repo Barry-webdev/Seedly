@@ -2,7 +2,7 @@
 
 import React, { useState, useCallback } from "react";
 import { ArrowRight, CheckCircle2, AlertCircle, Loader2, Monitor, Smartphone, PenTool, TrendingUp, HelpCircle } from "lucide-react";
-import type { QuoteFormData, QuoteFormErrors, FormState } from "@/types";
+import type { QuoteFormData, QuoteFormErrors, FormState, ServiceType } from "@/types";
 import { isValidEmail, isValidPhone, cn } from "@/lib/utils";
 import { whatsappCTA } from "@/data/contact";
 
@@ -119,7 +119,7 @@ export const QuoteForm: React.FC = () => {
   );
 
   const handleServiceSelect = (value: string) => {
-    setFormData((prev) => ({ ...prev, serviceType: value }));
+    setFormData((prev) => ({ ...prev, serviceType: value as ServiceType }));
     if (errors.serviceType) {
       setErrors((prev) => ({ ...prev, serviceType: undefined }));
     }
