@@ -4,7 +4,8 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 // =============================================
-// LOGO SEEDLY — Image officielle depuis /public/Logo.jpeg
+// LOGO SEEDLY — Image officielle /public/Logo.jpeg
+// Format carré 1600×1600px
 // =============================================
 
 interface LogoProps {
@@ -14,10 +15,11 @@ interface LogoProps {
   asLink?: boolean;
 }
 
+// Tailles carrées adaptées à chaque contexte
 const sizes = {
-  sm: { width: 100, height: 36 },
-  md: { width: 130, height: 46 },
-  lg: { width: 160, height: 56 },
+  sm: 36,   // Menu mobile header compact
+  md: 48,   // Header principal
+  lg: 60,   // Footer
 };
 
 export const Logo: React.FC<LogoProps> = ({
@@ -26,23 +28,34 @@ export const Logo: React.FC<LogoProps> = ({
   className,
   asLink = true,
 }) => {
-  const { width, height } = sizes[size];
+  const dimension = sizes[size];
 
   const logoContent = (
-    <div className={cn("flex flex-col", className)}>
+    <div className={cn("flex items-center gap-2.5", className)}>
       <Image
         src="/Logo.jpeg"
         alt="Seedly Technology & Apps"
-        width={width}
-        height={height}
-        className="object-contain"
+        width={dimension}
+        height={dimension}
+        className="rounded-lg object-contain"
         priority
       />
-      {showTagline && (
-        <span className="text-xs font-medium text-neutral-400 mt-0.5 leading-tight">
-          Technology & Apps
+      <div className="flex flex-col leading-none">
+        <span
+          className="font-bold text-neutral-50 tracking-tight"
+          style={{
+            fontFamily: "var(--font-plus-jakarta), sans-serif",
+            fontSize: size === "sm" ? "1rem" : size === "md" ? "1.2rem" : "1.4rem",
+          }}
+        >
+          Seedly
         </span>
-      )}
+        {showTagline && (
+          <span className="text-xs text-neutral-400 font-medium mt-0.5">
+            Technology & Apps
+          </span>
+        )}
+      </div>
     </div>
   );
 
