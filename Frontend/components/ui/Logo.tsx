@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 
 interface LogoProps {
   size?: "sm" | "md" | "lg";
+  showTagline?: boolean;
   className?: string;
   asLink?: boolean;
 }
@@ -21,6 +22,9 @@ const sizes = {
 
 export const Logo: React.FC<LogoProps> = ({
   size = "md",
+  // showTagline accepté mais non affiché — le logo suffit
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  showTagline: _showTagline,
   className,
   asLink = true,
 }) => {
