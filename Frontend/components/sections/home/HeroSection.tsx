@@ -29,12 +29,17 @@ export const HeroSection: React.FC = () => {
       <div className="container-seedly relative z-10 pt-32 pb-20">
         <div className="max-w-4xl mx-auto">
           {/* Badge d'accroche */}
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-accent/20 bg-accent/5 text-accent text-sm font-medium">
               <Sparkles className="w-4 h-4" aria-hidden="true" />
               <span>Agence digitale à Conakry, Guinée</span>
             </div>
           </div>
+
+          {/* Nom complet */}
+          <p className="text-center text-sm font-semibold text-neutral-400 uppercase tracking-widest mb-4">
+            Seedly Technology &amp; Apps
+          </p>
 
           {/* Titre principal */}
           <h1
@@ -49,7 +54,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Description */}
           <p className="text-center text-lg md:text-xl text-neutral-400 leading-relaxed max-w-2xl mx-auto mb-4">
-            Seedly accompagne les entreprises guinéennes dans leur transformation digitale.
+            Seedly Technology &amp; Apps accompagne les entreprises guinéennes dans leur transformation digitale.
             Sites web, applications mobiles, design et marketing — nous construisons les outils
             qui font grandir votre activité.
           </p>

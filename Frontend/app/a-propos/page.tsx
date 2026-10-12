@@ -35,7 +35,8 @@ export default function AboutPage() {
               Notre histoire
             </div>
             <h1 id="about-title" className="section-title text-4xl md:text-5xl lg:text-6xl">
-              Seedly, l&apos;agence qui plante des{" "}
+              Seedly Technology &amp; Apps —{" "}
+              l&apos;agence qui plante des{" "}
               <span className="text-gradient">graines digitales</span>
             </h1>
             <p className="section-description text-lg">
