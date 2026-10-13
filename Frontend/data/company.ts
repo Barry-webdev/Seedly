@@ -119,7 +119,7 @@ export const teamMembers: TeamMember[] = [
     id: "member-001",
     name: "Abdoul Razzaï Barry",
     role: "Fondateur · Développeur Web & Mobile · CEO",
-    bio: "Développeur Full-Stack spécialisé dans la conception d'applications web & mobile modernes, de l'interface jusqu'à la logique serveur.",
+    bio: "Co-fondateur de Seedly Technology & Apps, passionné par la technologie et le développement digital en Guinée.",
     photo: "/Razzaï.jpeg",
     // TODO: Ajouter LinkedIn si disponible
   },
