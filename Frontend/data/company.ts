@@ -118,18 +118,15 @@ export const teamMembers: TeamMember[] = [
   {
     id: "member-001",
     name: "Abdoul Razzaï Barry",
-    role: "Fondateur · Développeur Web & Mobile · CEO",
+    role: "Co-Founder & CEO",
     bio: "Co-fondateur de Seedly Technology & Apps, passionné par la technologie et le développement digital en Guinée.",
     photo: "/Razzaï.jpeg",
-    // TODO: Ajouter LinkedIn si disponible
   },
   {
     id: "member-002",
     name: "Boubacar Bah",
-    role: "Fondateur · Développeur Web & Mobile · CEO",
-    // TODO: Ajouter la bio de Boubacar
+    role: "Co-Founder & CEO",
     bio: "Co-fondateur de Seedly Technology & Apps, passionné par la technologie et le développement digital en Guinée.",
-    // TODO: Remplacer par la vraie photo quand elle sera disponible
     photo: "",
   },
 ];
