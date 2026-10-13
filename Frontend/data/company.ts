@@ -114,17 +114,24 @@ export const workSteps: WorkStep[] = [
   },
 ];
 
-// TODO: Ajouter les vrais membres de l'équipe quand les informations seront disponibles
 export const teamMembers: TeamMember[] = [
-  // Exemple de structure :
-  // {
-  //   id: "member-001",
-  //   name: "Prénom Nom",
-  //   role: "Fondateur & Directeur Technique",
-  //   bio: "...",
-  //   photo: "/images/team/nom.jpg",
-  //   linkedin: "https://linkedin.com/in/...",
-  // },
+  {
+    id: "member-001",
+    name: "Abdoul Razzaï Barry",
+    role: "Fondateur · Développeur Web & Mobile · CEO",
+    bio: "Développeur Full-Stack spécialisé dans la conception d'applications web & mobile modernes, de l'interface jusqu'à la logique serveur.",
+    photo: "/Razzaï.jpeg",
+    // TODO: Ajouter LinkedIn si disponible
+  },
+  {
+    id: "member-002",
+    name: "Boubacar Bah",
+    role: "Fondateur · Développeur Web & Mobile · CEO",
+    // TODO: Ajouter la bio de Boubacar
+    bio: "Co-fondateur de Seedly Technology & Apps, passionné par la technologie et le développement digital en Guinée.",
+    // TODO: Remplacer par la vraie photo quand elle sera disponible
+    photo: "",
+  },
 ];
 
 export const stats = [
