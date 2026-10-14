@@ -10,21 +10,15 @@ import { CTASection } from "@/components/sections/home/CTASection";
 
 export const metadata: Metadata = {
   title: "Seedly Technology & Apps — Agence digitale à Conakry, Guinée",
-  description:
-    "Seedly accompagne les entreprises guinéennes dans leur transformation digitale. Création de sites web, développement d'applications mobiles, design UI/UX et marketing digital à Conakry.",
+  description: "Seedly accompagne les entreprises guinéennes dans leur transformation digitale. Création de sites web, développement d'applications mobiles, design UI/UX et marketing digital à Conakry.",
 };
 
 export default function HomePage() {
   return (
     <MainLayout>
-      {/* Lien d'accès rapide pour l'accessibilité */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 btn-accent btn-sm"
-      >
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 btn-primary btn-sm">
         Aller au contenu principal
       </a>
-
       <HeroSection />
       <ValuePropositionSection />
       <ServicesSection />

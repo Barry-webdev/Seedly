@@ -1,10 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
 
-// =============================================
-// BADGE — Composant atomique Seedly
-// =============================================
-
 type BadgeVariant = "primary" | "neutral" | "accent";
 
 interface BadgeProps {
@@ -16,20 +12,11 @@ interface BadgeProps {
 const badgeVariants: Record<BadgeVariant, string> = {
   primary: "badge-primary",
   neutral: "badge-neutral",
-  accent:
-    "badge text-xs font-semibold px-3 py-1 rounded-full border border-accent/30 text-accent bg-accent/10",
+  accent:  "badge-primary",
 };
 
-export const Badge: React.FC<BadgeProps> = ({
-  children,
-  variant = "neutral",
-  className,
-}) => {
-  return (
-    <span className={cn(badgeVariants[variant], className)}>
-      {children}
-    </span>
-  );
-};
+export const Badge: React.FC<BadgeProps> = ({ children, variant = "neutral", className }) => (
+  <span className={cn(badgeVariants[variant], className)}>{children}</span>
+);
 
 export default Badge;

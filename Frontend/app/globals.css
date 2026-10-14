@@ -3,30 +3,29 @@
 @tailwind utilities;
 
 /* =============================================
-   SEEDLY TECHNOLOGY & APPS — Global Styles
-   Police : Geist Variable Font (locale)
+   SEEDLY TECHNOLOGY & APPS
+   Palette : Blanc cassé #F4F3EF · Anthracite #202326 · Bleu #4169E1
+   Police  : Geist Variable Font (locale)
    ============================================= */
 
 @layer base {
   :root {
-    /* Couleurs */
-    --background:    #0A0F0D;
-    --foreground:    #F3F4F6;
-    --primary:       #1A7A4A;
-    --primary-dark:  #0F5C35;
-    --accent:        #2DD4A0;
-    --surface:       #0D1A14;
-    --surface-card:  #1A2920;
-    --border:        rgba(45, 212, 160, 0.12);
-    --border-subtle: rgba(255, 255, 255, 0.06);
-    --text-primary:  #F3F4F6;
-    --text-secondary:#9CA3AF;
-    --text-muted:    #6B7280;
+    --background:     #F4F3EF;
+    --foreground:     #202326;
+    --primary:        #4169E1;
+    --primary-dark:   #2F52C8;
+    --primary-light:  #EEF1FD;
+    --surface:        #FFFFFF;
+    --surface-alt:    #F4F3EF;
+    --border:         #DADAD5;
+    --border-focus:   #4169E1;
+    --text-primary:   #202326;
+    --text-secondary: #62666A;
+    --text-muted:     #9A9A93;
 
-    /* Layout */
-    --header-height:      4.5rem;
-    --max-width:          1280px;
-    --container-padding:  1.5rem;
+    --header-height: 4.5rem;
+    --max-width:     1280px;
+    --radius-card:   1rem;
   }
 
   *, *::before, *::after {
@@ -46,7 +45,6 @@
   body {
     background-color: var(--background);
     color: var(--foreground);
-    /* Geist via variable CSS injectée par next/font */
     font-family: var(--font-geist), system-ui, -apple-system, sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -54,37 +52,32 @@
     overflow-x: hidden;
   }
 
-  /* ── Hiérarchie typographique Geist ─────────────────── */
-
+  /* ── Hiérarchie typographique ─────────────────────── */
   h1 {
-    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 700;
-    font-size: clamp(2rem, 5vw, 3.75rem);
-    line-height: 1.1;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.25rem, 5.5vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
     color: var(--text-primary);
   }
 
   h2 {
-    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 600;
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-    line-height: 1.2;
+    font-size: clamp(1.625rem, 3.5vw, 2.5rem);
+    line-height: 1.15;
     letter-spacing: -0.025em;
     color: var(--text-primary);
   }
 
   h3 {
-    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 600;
     font-size: clamp(1.125rem, 2.5vw, 1.5rem);
     line-height: 1.3;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.018em;
     color: var(--text-primary);
   }
 
   h4, h5, h6 {
-    font-family: var(--font-geist), system-ui, sans-serif;
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: -0.01em;
@@ -92,41 +85,31 @@
   }
 
   p {
-    font-weight: 400;
     line-height: 1.75;
     color: var(--text-secondary);
-    max-width: 70ch;
   }
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+  a { color: inherit; text-decoration: none; }
 
-  /* ── Focus visible ───────────────────────────────────── */
   :focus-visible {
-    outline: 2px solid var(--accent);
+    outline: 2px solid var(--primary);
     outline-offset: 3px;
     border-radius: 4px;
   }
 
-  /* ── Scrollbar ───────────────────────────────────────── */
   ::-webkit-scrollbar       { width: 5px; }
   ::-webkit-scrollbar-track { background: var(--background); }
-  ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+  ::-webkit-scrollbar-thumb { background: #DADAD5; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #4169E1; }
 
-  /* ── Sélection de texte ──────────────────────────────── */
   ::selection {
-    background: rgba(45, 212, 160, 0.2);
+    background: rgba(65, 105, 225, 0.12);
     color: var(--text-primary);
   }
 
-  /* ── Accessibilité : réduction des animations ────────── */
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
     html { scroll-behavior: auto; }
@@ -138,48 +121,48 @@
    ============================================================ */
 @layer components {
 
-  /* Container */
+  /* ── Container ──────────────────────────────────────── */
   .container-seedly {
     @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
     max-width: var(--max-width);
   }
 
-  /* Sections */
+  /* ── Sections ───────────────────────────────────────── */
   .section-padding    { @apply py-16 md:py-24 lg:py-32; }
   .section-padding-sm { @apply py-12 md:py-16 lg:py-20; }
 
-  /* Label de section */
+  /* ── Label de section ───────────────────────────────── */
   .section-label {
-    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase;
-    color: var(--accent);
-    letter-spacing: 0.12em;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest;
+    color: var(--primary);
+    letter-spacing: 0.1em;
   }
 
-  /* Titre de section — Geist 600, fluide */
+  /* ── Titre de section ───────────────────────────────── */
   .section-title {
-    font-family: var(--font-geist), system-ui, sans-serif;    font-weight: 600;
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    line-height: 1.15;
-    letter-spacing: -0.025em;
-    color: #F9FAFB;
+    font-weight: 700;
+    font-size: clamp(1.875rem, 3.5vw, 2.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
   }
 
-  /* Description de section */
+  /* ── Description de section ─────────────────────────── */
   .section-description {
-    @apply text-lg text-neutral-400 leading-relaxed max-w-2xl;
-    font-weight: 400;
+    @apply text-lg leading-relaxed max-w-2xl;
+    color: var(--text-secondary);
   }
 
   /* ── Cartes ─────────────────────────────────────────── */
   .card-seedly {
-    @apply rounded-2xl border transition-all duration-300;
-    background: var(--surface-card);
-    border-color: var(--border-subtle);
+    @apply rounded-2xl border bg-white transition-all duration-250;
+    border-color: var(--border);
+    box-shadow: 0 2px 8px rgba(32,35,38,0.06);
   }
   .card-seedly:hover {
-    border-color: var(--border);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 32px rgba(32,35,38,0.10);
     transform: translateY(-2px);
+    border-color: #C4C4BD;
   }
 
   /* ── Badges ─────────────────────────────────────────── */
@@ -187,38 +170,51 @@
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full;
     font-size: 0.75rem;
     font-weight: 500;
-    letter-spacing: 0;
   }
   .badge-primary {
     @apply badge;
-    background: rgba(26, 122, 74, 0.15);
-    color: var(--accent);
-    border: 1px solid rgba(45, 212, 160, 0.2);
+    background: var(--primary-light);
+    color: var(--primary);
+    border: 1px solid rgba(65,105,225,0.2);
   }
   .badge-neutral {
     @apply badge;
-    background: rgba(255, 255, 255, 0.05);
+    background: #F4F3EF;
     color: var(--text-secondary);
-    border: 1px solid var(--border-subtle);
+    border: 1px solid var(--border);
   }
 
-  /* ── Gradient de texte ───────────────────────────────── */
+  /* ── Texte gradient (bleu) ───────────────────────────── */
   .text-gradient {
-    background: linear-gradient(135deg, #2DD4A0 0%, #1A7A4A 100%);
+    background: linear-gradient(135deg, #4169E1 0%, #2F52C8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* ── Grille de fond décorative ───────────────────────── */
+  /* ── Motif de points décoratif ───────────────────────── */
+  .dot-pattern {
+    background-image: radial-gradient(circle, #DADAD5 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  /* ── Grille de fond légère ───────────────────────────── */
   .grid-bg {
     background-image:
-      linear-gradient(rgba(45, 212, 160, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(45, 212, 160, 0.03) 1px, transparent 1px);
+      linear-gradient(rgba(65,105,225,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(65,105,225,0.04) 1px, transparent 1px);
     background-size: 64px 64px;
   }
 
-  /* ── Boutons — Geist 500-600 ─────────────────────────── */
+  /* ── Divider décoratif ───────────────────────────────── */
+  .divider-accent {
+    @apply w-10 h-0.5 rounded-full;
+    background: var(--primary);
+  }
+
+  /* ================================================================
+     BOUTONS
+     ================================================================ */
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-xl
            transition-all duration-200 cursor-pointer select-none;
@@ -229,70 +225,76 @@
   }
   .btn:disabled { @apply opacity-50 cursor-not-allowed pointer-events-none; }
 
-  .btn-sm  { @apply btn px-4 py-2;   font-size: 0.875rem; }
-  .btn-md  { @apply btn px-6 py-3;   font-size: 0.9375rem; }
-  .btn-lg  { @apply btn px-8 py-4;   font-size: 1rem; font-weight: 600; }
+  .btn-sm  { @apply btn px-4 py-2;    font-size: 0.875rem; }
+  .btn-md  { @apply btn px-5 py-2.5;  font-size: 0.9375rem; }
+  .btn-lg  { @apply btn px-7 py-3.5;  font-size: 1rem; font-weight: 600; }
 
+  /* Bouton primaire — Bleu électrique */
   .btn-primary {
     background: var(--primary);
     color: #fff;
+    box-shadow: 0 1px 3px rgba(65,105,225,0.25);
   }
   .btn-primary:hover {
     background: var(--primary-dark);
+    box-shadow: 0 4px 16px rgba(65,105,225,0.35);
     transform: translateY(-1px);
-    box-shadow: 0 8px 25px rgba(26, 122, 74, 0.35);
   }
 
+  /* Bouton accent = alias bouton primaire */
   .btn-accent {
-    background: var(--accent);
-    color: #0A0F0D;
+    background: var(--primary);
+    color: #fff;
     font-weight: 600;
+    box-shadow: 0 1px 3px rgba(65,105,225,0.25);
   }
   .btn-accent:hover {
-    background: #1AAF83;
+    background: var(--primary-dark);
+    box-shadow: 0 4px 16px rgba(65,105,225,0.35);
     transform: translateY(-1px);
-    box-shadow: 0 8px 25px rgba(45, 212, 160, 0.35);
   }
 
+  /* Bouton outline — bordure anthracite */
   .btn-outline {
     background: transparent;
     color: var(--text-primary);
-    border: 1.5px solid var(--border-subtle);
+    border: 1.5px solid var(--border);
   }
   .btn-outline:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background: rgba(45, 212, 160, 0.05);
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
   }
 
+  /* Bouton ghost */
   .btn-ghost {
     background: transparent;
     color: var(--text-secondary);
   }
   .btn-ghost:hover {
     color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.05);
+    background: #F4F3EF;
   }
 
-  /* ── Champs de formulaire ────────────────────────────── */
+  /* ================================================================
+     INPUTS
+     ================================================================ */
   .input-seedly {
     @apply w-full px-4 py-3 rounded-xl text-sm transition-all duration-200;
     font-family: var(--font-geist), system-ui, sans-serif;
-    font-weight: 400;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1.5px solid var(--border-subtle);
+    background: #fff;
+    border: 1.5px solid var(--border);
     color: var(--text-primary);
     outline: none;
   }
   .input-seedly::placeholder { color: var(--text-muted); }
   .input-seedly:focus {
     border-color: var(--primary);
-    background: rgba(26, 122, 74, 0.05);
-    box-shadow: 0 0 0 3px rgba(26, 122, 74, 0.15);
+    box-shadow: 0 0 0 3px rgba(65,105,225,0.12);
   }
   .input-seedly.error {
-    border-color: #EF4444;
-    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.15);
+    border-color: #DC2626;
+    box-shadow: 0 0 0 3px rgba(220,38,38,0.10);
   }
 }
 
@@ -300,8 +302,8 @@
    UTILITAIRES
    ============================================================ */
 @layer utilities {
-  .text-balance  { text-wrap: balance; }
-  .text-pretty   { text-wrap: pretty; }
+  .text-balance { text-wrap: balance; }
+  .text-pretty  { text-wrap: pretty; }
 
   .scrollbar-hide {
     -ms-overflow-style: none;
