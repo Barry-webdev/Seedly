@@ -44,13 +44,13 @@ export const ServicesSection: React.FC = () => {
                 </div>
                 <ul className="space-y-1.5">
                   {service.deliverables.slice(0, 3).map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs text-[#62666A]">
+                    <li key={i} className="flex items-center gap-2 text-xs text-[#9A9A93]">
                       <span className="w-1 h-1 rounded-full bg-[#4169E1]/40 shrink-0" aria-hidden="true" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center gap-2 text-sm font-medium text-[#62666A] group-hover:text-[#7F9FF1] transition-colors pt-2 border-t border-white/8">
+                <div className="flex items-center gap-2 text-sm font-medium text-[#9A9A93] group-hover:text-[#7F9FF1] transition-colors pt-2 border-t border-white/8">
                   <span>En savoir plus</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </div>

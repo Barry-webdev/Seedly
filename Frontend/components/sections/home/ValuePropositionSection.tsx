@@ -47,8 +47,8 @@ export const ValuePropositionSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#EEF1FD] flex items-center justify-center text-[#4169E1]">
                   {p.icon}
                 </div>
-                <h3 className="text-sm font-semibold text-[#202326] leading-snug">{p.title}</h3>
-                <p className="text-xs text-[#62666A] leading-relaxed">{p.description}</p>
+                <h3 className="text-sm font-semibold text-[#F4F3EF] leading-snug">{p.title}</h3>
+                <p className="text-xs text-[#9A9A93] leading-relaxed">{p.description}</p>
               </div>
             ))}
           </div>

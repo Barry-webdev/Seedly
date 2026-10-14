@@ -66,7 +66,7 @@ export default function ContactPage() {
             {/* Informations de contact */}
             <div className="space-y-8">
               <div className="space-y-2">
-                <h2 className="text-xl font-bold text-white">Nos coordonnées</h2>
+                <h2 className="text-xl font-bold text-[#F4F3EF]">Nos coordonnées</h2>
                 <p className="text-[#9A9A93] text-sm leading-relaxed">
                   Choisissez le canal qui vous convient le mieux. WhatsApp est le moyen
                   le plus rapide pour obtenir une réponse.
@@ -85,7 +85,7 @@ export default function ContactPage() {
                       <MessageCircle className="w-5 h-5 text-green-400" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm group-hover:text-green-400 transition-colors">
+                      <p className="font-semibold text-[#F4F3EF] text-sm group-hover:text-green-400 transition-colors">
                         WhatsApp
                       </p>
                       <p className="text-[#9A9A93] text-sm">{contactInfo.whatsappNumber}</p>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                       <Mail className="w-5 h-5 text-[#7F9FF1]" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm group-hover:text-[#7F9FF1] transition-colors">
+                      <p className="font-semibold text-[#F4F3EF] text-sm group-hover:text-[#7F9FF1] transition-colors">
                         Email
                       </p>
                       <p className="text-[#9A9A93] text-sm">{contactInfo.email}</p>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                       <Phone className="w-5 h-5 text-[#7F9FF1]" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm group-hover:text-[#7F9FF1] transition-colors">
+                      <p className="font-semibold text-[#F4F3EF] text-sm group-hover:text-[#7F9FF1] transition-colors">
                         Téléphone
                       </p>
                       <p className="text-[#9A9A93] text-sm">{contactInfo.phone}</p>
@@ -137,7 +137,7 @@ export default function ContactPage() {
                       <MapPin className="w-5 h-5 text-[#7F9FF1]" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm">Localisation</p>
+                      <p className="font-semibold text-[#F4F3EF] text-sm">Localisation</p>
                       <p className="text-[#9A9A93] text-sm">{contactInfo.address}</p>
                     </div>
                   </div>
@@ -145,13 +145,13 @@ export default function ContactPage() {
               </ul>
 
               {/* Horaires */}
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/3 border border-white/8">
-                <Clock className="w-4 h-4 text-[#62666A] shrink-0 mt-0.5" aria-hidden="true" />
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-[#1C1F26]/3 border border-white/8">
+                <Clock className="w-4 h-4 text-[#9A9A93] shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
                   <p className="text-sm font-medium text-[#F4F3EF]">
                     Disponibilité
                   </p>
-                  <p className="text-xs text-[#62666A] mt-0.5">
+                  <p className="text-xs text-[#9A9A93] mt-0.5">
                     Du lundi au vendredi, 8h — 18h (GMT)
                     <br />
                     Réponse sous 24h garantie
@@ -161,7 +161,7 @@ export default function ContactPage() {
 
               {/* Réseaux sociaux */}
               <div className="space-y-3">
-                <p className="text-sm font-semibold text-white">Suivez-nous</p>
+                <p className="text-sm font-semibold text-[#F4F3EF]">Suivez-nous</p>
                 <div className="flex items-center gap-3" aria-label="Réseaux sociaux de Seedly">
                   {contactInfo.socials.map((social) => (
                     <a
@@ -183,7 +183,7 @@ export default function ContactPage() {
             {/* Panel projet rapide */}
             <div className="card-seedly p-8 space-y-6">
               <div className="space-y-2">
-                <h2 className="text-xl font-bold text-white">
+                <h2 className="text-xl font-bold text-[#F4F3EF]">
                   Vous avez un projet ?
                 </h2>
                 <p className="text-[#9A9A93] text-sm leading-relaxed">

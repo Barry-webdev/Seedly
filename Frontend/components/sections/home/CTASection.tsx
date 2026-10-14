@@ -5,7 +5,7 @@ import { whatsappCTA } from "@/data/contact";
 
 export const CTASection: React.FC = () => {
   return (
-    <section className="section-padding bg-canvas" aria-labelledby="cta-title">
+    <section className="section-padding bg-[#0A0B0E]" aria-labelledby="cta-title">
       <div className="container-seedly">
         <div className="relative rounded-3xl overflow-hidden bg-[#202326]">
           <div className="absolute inset-0 dot-pattern opacity-20" aria-hidden="true" />

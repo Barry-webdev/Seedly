@@ -23,7 +23,7 @@ export const DifferentiatorSection: React.FC = () => {
           <p className="text-xl md:text-2xl font-semibold text-[#F4F3EF] leading-relaxed">
             &ldquo;Notre mission : planter une graine digitale dans chaque business guinéen.&rdquo;
           </p>
-          <footer className="mt-3 text-sm text-[#62666A]">— Seedly Technology &amp; Apps</footer>
+          <footer className="mt-3 text-sm text-[#9A9A93]">— Seedly Technology &amp; Apps</footer>
         </blockquote>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">

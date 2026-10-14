@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <MainLayout>
-      <section className="min-h-screen flex items-center justify-center bg-canvas" aria-labelledby="not-found-title">
+      <section className="min-h-screen flex items-center justify-center bg-[#0A0B0E]" aria-labelledby="not-found-title">
         <div className="container-seedly">
           <div className="max-w-2xl mx-auto text-center space-y-8 py-20">
             <div className="flex justify-center">
@@ -26,8 +26,8 @@ export default function NotFound() {
               </div>
             </div>
             <div className="space-y-3">
-              <h1 id="not-found-title" className="text-[#202326]">Cette page est introuvable</h1>
-              <p className="text-[#62666A]">
+              <h1 id="not-found-title" className="text-[#F4F3EF]">Cette page est introuvable</h1>
+              <p className="text-[#9A9A93]">
                 La page que vous cherchez n&apos;existe pas, a été déplacée ou
                 l&apos;adresse est incorrecte.
               </p>

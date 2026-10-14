@@ -22,12 +22,12 @@ export const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          <p className="text-center text-xs font-semibold tracking-[0.18em] uppercase text-[#62666A] mb-4">            Seedly Technology &amp; Apps
+          <p className="text-center text-xs font-semibold tracking-[0.18em] uppercase text-[#9A9A93] mb-4">            Seedly Technology &amp; Apps
           </p>
 
           <h1
             id="hero-title"
-            className="text-center font-bold text-balance text-[#202326] mb-6"
+            className="text-center font-bold text-balance text-[#F4F3EF] mb-6"
             style={{ fontSize: "clamp(2.25rem, 6vw, 4.25rem)", lineHeight: 1.06, letterSpacing: "-0.035em" }}
           >
             Votre{" "}
@@ -60,7 +60,7 @@ export const HeroSection: React.FC = () => {
               href={whatsappCTA()}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-[#62666A] hover:text-[#202326] transition-colors"
+              className="inline-flex items-center gap-2 text-sm text-[#9A9A93] hover:text-[#F4F3EF] transition-colors"
             >
               <MessageCircle className="w-4 h-4 text-green-500" aria-hidden="true" />
               Ou écrivez-nous directement sur WhatsApp
@@ -102,7 +102,7 @@ export const HeroSection: React.FC = () => {
                   { label: "Lancement",     width: "96%" },
                 ].map((bar) => (
                   <div key={bar.label} className="flex items-center gap-3">
-                    <span className="text-xs text-[#62666A] w-28 text-right">{bar.label}</span>
+                    <span className="text-xs text-[#9A9A93] w-28 text-right">{bar.label}</span>
                     <div className="flex-1 h-1.5 rounded-full bg-white/8">
                       <div className="h-full rounded-full bg-[#4169E1]" style={{ width: bar.width }} />
                     </div>
@@ -112,7 +112,7 @@ export const HeroSection: React.FC = () => {
               </div>
             </div>
           </div>
-          <div className="absolute -bottom-4 left-8 right-8 h-6 bg-[#DADAD5]/60 rounded-full blur-xl" />
+          <div className="absolute -bottom-4 left-8 right-8 h-6 bg-[#4169E1]/15 rounded-full blur-xl" />
         </div>
       </div>
     </section>

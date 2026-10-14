@@ -69,8 +69,8 @@ export default function RealisationsPage() {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   activeCategory === cat.id
-                    ? "bg-[#4169E1] text-white border border-[#4169E1]/50"
-                    : "bg-white/5 text-[#9A9A93] border border-white/8 hover:text-white hover:bg-white/10"
+                    ? "bg-[#4169E1] text-[#F4F3EF] border border-[#4169E1]/50"
+                    : "bg-[#1C1F26]/5 text-[#9A9A93] border border-white/8 hover:text-[#F4F3EF] hover:bg-[#1C1F26]/10"
                 }`}
                 aria-pressed={activeCategory === cat.id}
               >
@@ -128,7 +128,7 @@ export default function RealisationsPage() {
                         {project.technologies.map((tech) => (
                           <span
                             key={tech.name}
-                            className="px-2 py-0.5 rounded text-xs text-[#62666A] bg-white/5 border border-white/8"
+                            className="px-2 py-0.5 rounded text-xs text-[#9A9A93] bg-[#1C1F26]/5 border border-white/8"
                           >
                             {tech.name}
                           </span>
@@ -152,7 +152,7 @@ export default function RealisationsPage() {
             </div>
           ) : (
             <div className="py-20 text-center">
-              <p className="text-[#62666A]">
+              <p className="text-[#9A9A93]">
                 Aucun projet dans cette catégorie pour le moment.
               </p>
             </div>

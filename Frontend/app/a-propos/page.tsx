@@ -53,12 +53,12 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-6">
             <div className="card-seedly p-8 space-y-4">
               <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-primary/20 flex items-center justify-center text-2xl">🌱</div>
-              <h2 id="mission-title" className="text-xl font-bold text-white">Notre mission</h2>
+              <h2 id="mission-title" className="text-xl font-bold text-[#F4F3EF]">Notre mission</h2>
               <p className="text-[#9A9A93] leading-relaxed">{companyInfo.mission}</p>
             </div>
             <div className="card-seedly p-8 space-y-4">
               <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-accent/20 flex items-center justify-center text-2xl">🎯</div>
-              <h2 className="text-xl font-bold text-white">Notre vision</h2>
+              <h2 className="text-xl font-bold text-[#F4F3EF]">Notre vision</h2>
               <p className="text-[#9A9A93] leading-relaxed">{companyInfo.vision}</p>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
               ].map((item) => (
                 <div key={item.title} className="card-seedly p-6 text-center space-y-3">
                   <span className="text-3xl">{item.emoji}</span>
-                  <h3 className="font-bold text-white">{item.title}</h3>
+                  <h3 className="font-bold text-[#F4F3EF]">{item.title}</h3>
                   <p className="text-sm text-[#9A9A93] leading-relaxed">{item.description}</p>
                 </div>
               ))}
@@ -105,7 +105,7 @@ export default function AboutPage() {
                 <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-primary/20 flex items-center justify-center text-[#7F9FF1] group-hover:bg-primary/25 transition-colors">
                   {valueIcons[value.icon] ?? <Star className="w-5 h-5" />}
                 </div>
-                <h3 className="font-bold text-white">{value.title}</h3>
+                <h3 className="font-bold text-[#F4F3EF]">{value.title}</h3>
                 <p className="text-sm text-[#9A9A93] leading-relaxed">{value.description}</p>
               </div>
             ))}
@@ -157,7 +157,7 @@ export default function AboutPage() {
                       )}
                     </div>
                     <div>
-                      <h3 className="font-bold text-white text-lg leading-tight">
+                      <h3 className="font-bold text-[#F4F3EF] text-lg leading-tight">
                         {member.name}
                       </h3>
                       <p className="text-xs text-[#7F9FF1] font-medium mt-1 leading-snug">
@@ -187,7 +187,7 @@ export default function AboutPage() {
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-[#62666A] leading-none mb-0.5">WhatsApp</p>
+                      <p className="text-xs text-[#9A9A93] leading-none mb-0.5">WhatsApp</p>
                       <p className="text-sm font-medium text-green-400 group-hover/wa:text-green-300 transition-colors">
                         {displayNumber}
                       </p>

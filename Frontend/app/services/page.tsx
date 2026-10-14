@@ -67,7 +67,7 @@ export default function ServicesPage() {
                       <span className="text-xs font-semibold text-[#7F9FF1] uppercase tracking-widest">
                         Service 0{index + 1}
                       </span>
-                      <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">
+                      <h2 className="text-2xl md:text-3xl font-bold text-[#F4F3EF] mt-1">
                         {service.shortTitle}
                       </h2>
                     </div>
@@ -77,7 +77,7 @@ export default function ServicesPage() {
 
                 {/* Besoins */}
                 <div className="space-y-3">
-                  <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
+                  <h3 className="text-sm font-semibold text-[#F4F3EF] uppercase tracking-wider">
                     Pour qui c&apos;est fait ?
                   </h3>
                   <ul className="space-y-2" aria-label="Profils concernés">
@@ -108,14 +108,14 @@ export default function ServicesPage() {
               <div className="space-y-6">
                 {/* Prestations */}
                 <div className="card-seedly p-6 space-y-4">
-                  <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
+                  <h3 className="text-sm font-semibold text-[#F4F3EF] uppercase tracking-wider">
                     Ce qui est inclus
                   </h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {service.features.map((feature, i) => (
                       <div key={i} className="space-y-1">
-                        <h4 className="text-sm font-semibold text-white">{feature.title}</h4>
-                        <p className="text-xs text-[#62666A] leading-relaxed">{feature.description}</p>
+                        <h4 className="text-sm font-semibold text-[#F4F3EF]">{feature.title}</h4>
+                        <p className="text-xs text-[#9A9A93] leading-relaxed">{feature.description}</p>
                       </div>
                     ))}
                   </div>
@@ -123,7 +123,7 @@ export default function ServicesPage() {
 
                 {/* Bénéfices */}
                 <div className="card-seedly p-6 space-y-4">
-                  <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
+                  <h3 className="text-sm font-semibold text-[#F4F3EF] uppercase tracking-wider">
                     Les bénéfices pour vous
                   </h3>
                   <ul className="space-y-2.5" aria-label="Bénéfices">

@@ -39,14 +39,14 @@ export const ProcessSection: React.FC = () => {
               {step.duration && (
                 <div className="pt-2 border-t border-white/8">
                   <span className="text-xs text-[#9A9A93]">
-                    Durée estimée : <span className="text-[#62666A]">{step.duration}</span>
+                    Durée estimée : <span className="text-[#9A9A93]">{step.duration}</span>
                   </span>
                 </div>
               )}
             </div>
           ))}
         </div>
-        <p className="mt-8 text-center text-sm text-[#62666A]">
+        <p className="mt-8 text-center text-sm text-[#9A9A93]">
           Les délais varient selon la complexité du projet. Chaque engagement est précisé dans le devis.
         </p>
       </div>
