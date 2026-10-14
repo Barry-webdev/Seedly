@@ -8,9 +8,9 @@ import { whatsappCTA } from "@/data/contact";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-canvas" aria-labelledby="hero-title">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#0A0B0E]" aria-labelledby="hero-title">
       <div className="absolute inset-0 dot-pattern opacity-50 pointer-events-none" aria-hidden="true" />
-      <div className="absolute inset-0 bg-gradient-to-b from-canvas via-canvas/90 to-canvas pointer-events-none" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0A0B0E] via-[#0A0B0E]/90 to-[#0A0B0E] pointer-events-none" aria-hidden="true" />
 
       <div className="container-seedly relative z-10 pt-32 pb-20">
         <div className="max-w-4xl mx-auto">
@@ -22,8 +22,7 @@ export const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          <p className="text-center text-xs font-semibold tracking-[0.18em] uppercase text-[#62666A] mb-4">
-            Seedly Technology &amp; Apps
+          <p className="text-center text-xs font-semibold tracking-[0.18em] uppercase text-[#62666A] mb-4">            Seedly Technology &amp; Apps
           </p>
 
           <h1
@@ -36,7 +35,7 @@ export const HeroSection: React.FC = () => {
             {" "}commence ici.
           </h1>
 
-          <p className="text-center text-lg md:text-xl text-[#62666A] leading-relaxed max-w-2xl mx-auto mb-4">
+          <p className="text-center text-lg md:text-xl text-[#9A9A93] leading-relaxed max-w-2xl mx-auto mb-4">
             Seedly Technology &amp; Apps accompagne les entreprises guinéennes dans leur
             transformation digitale. Sites web, applications mobiles, design et marketing —
             nous construisons les outils qui font grandir votre activité.
@@ -72,14 +71,14 @@ export const HeroSection: React.FC = () => {
 
         {/* Visual mockup */}
         <div className="mt-20 relative max-w-4xl mx-auto" aria-hidden="true">
-          <div className="rounded-2xl overflow-hidden border border-[#DADAD5] bg-white shadow-card">
-            <div className="flex items-center gap-2 px-5 py-4 border-b border-[#DADAD5] bg-[#F4F3EF]">
+          <div className="rounded-2xl overflow-hidden border border-white/10 bg-[#14161A] shadow-lg">
+            <div className="flex items-center gap-2 px-5 py-4 border-b border-white/8 bg-[#1C1F26]">
               <div className="w-3 h-3 rounded-full bg-red-400/70" />
               <div className="w-3 h-3 rounded-full bg-yellow-400/70" />
               <div className="w-3 h-3 rounded-full bg-green-400/70" />
-              <div className="flex-1 mx-4 h-7 rounded-lg bg-white border border-[#DADAD5] flex items-center px-3">
+              <div className="flex-1 mx-4 h-7 rounded-lg bg-[#0A0B0E] border border-white/10 flex items-center px-3">
                 <div className="w-2 h-2 rounded-full bg-green-400 mr-2" />
-                <span className="text-xs text-[#62666A]">seedly.tech</span>
+                <span className="text-xs text-[#9A9A93]">seedly.tech</span>
               </div>
             </div>
             <div className="p-6">
@@ -90,9 +89,9 @@ export const HeroSection: React.FC = () => {
                   { label: "Design UI/UX", icon: "🎨" },
                   { label: "Marketing",    icon: "📈" },
                 ].map((item) => (
-                  <div key={item.label} className="p-4 rounded-xl border border-[#DADAD5] bg-[#F4F3EF] flex flex-col items-center gap-2">
+                  <div key={item.label} className="p-4 rounded-xl border border-white/8 bg-white/5 flex flex-col items-center gap-2">
                     <span className="text-2xl">{item.icon}</span>
-                    <span className="text-xs font-medium text-[#202326] text-center">{item.label}</span>
+                    <span className="text-xs font-medium text-[#F4F3EF] text-center">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -104,10 +103,10 @@ export const HeroSection: React.FC = () => {
                 ].map((bar) => (
                   <div key={bar.label} className="flex items-center gap-3">
                     <span className="text-xs text-[#62666A] w-28 text-right">{bar.label}</span>
-                    <div className="flex-1 h-1.5 rounded-full bg-[#F4F3EF] border border-[#DADAD5]">
+                    <div className="flex-1 h-1.5 rounded-full bg-white/8">
                       <div className="h-full rounded-full bg-[#4169E1]" style={{ width: bar.width }} />
                     </div>
-                    <span className="text-xs text-[#62666A] w-8">{bar.width}</span>
+                    <span className="text-xs text-[#9A9A93] w-8">{bar.width}</span>
                   </div>
                 ))}
               </div>

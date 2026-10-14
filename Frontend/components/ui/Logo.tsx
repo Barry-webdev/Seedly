@@ -47,7 +47,7 @@ export const Logo: React.FC<LogoProps> = ({
     return (
       <Link
         href="/"
-        className="inline-flex items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        className="inline-flex items-center rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4169E1]"
         aria-label="Seedly Technology & Apps — Retour à l'accueil"
       >
         {logoContent}

@@ -44,9 +44,9 @@ export default function ContactPage() {
         <div className="container-seedly relative z-10">
           <div className="max-w-2xl mx-auto text-center space-y-6">
             <div className="section-label justify-center">
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-6 h-0.5 rounded-full bg-[#4169E1]" aria-hidden="true" />
               Parlons
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-6 h-0.5 rounded-full bg-[#4169E1]" aria-hidden="true" />
             </div>
             <h1 id="contact-title" className="section-title text-4xl md:text-5xl">
               Prenons contact
@@ -67,7 +67,7 @@ export default function ContactPage() {
             <div className="space-y-8">
               <div className="space-y-2">
                 <h2 className="text-xl font-bold text-white">Nos coordonnées</h2>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <p className="text-[#9A9A93] text-sm leading-relaxed">
                   Choisissez le canal qui vous convient le mieux. WhatsApp est le moyen
                   le plus rapide pour obtenir une réponse.
                 </p>
@@ -88,10 +88,10 @@ export default function ContactPage() {
                       <p className="font-semibold text-white text-sm group-hover:text-green-400 transition-colors">
                         WhatsApp
                       </p>
-                      <p className="text-neutral-400 text-sm">{contactInfo.whatsappNumber}</p>
+                      <p className="text-[#9A9A93] text-sm">{contactInfo.whatsappNumber}</p>
                       <p className="text-xs text-green-500/70 mt-1">Réponse la plus rapide</p>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-neutral-600 group-hover:text-green-400 ml-auto mt-1 transition-all group-hover:translate-x-1" aria-hidden="true" />
+                    <ArrowRight className="w-4 h-4 text-[#9A9A93] group-hover:text-green-400 ml-auto mt-1 transition-all group-hover:translate-x-1" aria-hidden="true" />
                   </a>
                 </li>
 
@@ -100,16 +100,16 @@ export default function ContactPage() {
                     href={`mailto:${contactInfo.email}`}
                     className="flex items-start gap-4 p-5 rounded-2xl card-seedly group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-primary/15 border border-primary/20 flex items-center justify-center shrink-0">
-                      <Mail className="w-5 h-5 text-accent" aria-hidden="true" />
+                    <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-primary/20 flex items-center justify-center shrink-0">
+                      <Mail className="w-5 h-5 text-[#7F9FF1]" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm group-hover:text-accent transition-colors">
+                      <p className="font-semibold text-white text-sm group-hover:text-[#7F9FF1] transition-colors">
                         Email
                       </p>
-                      <p className="text-neutral-400 text-sm">{contactInfo.email}</p>
+                      <p className="text-[#9A9A93] text-sm">{contactInfo.email}</p>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-neutral-600 group-hover:text-accent ml-auto mt-1 transition-all group-hover:translate-x-1" aria-hidden="true" />
+                    <ArrowRight className="w-4 h-4 text-[#9A9A93] group-hover:text-[#7F9FF1] ml-auto mt-1 transition-all group-hover:translate-x-1" aria-hidden="true" />
                   </a>
                 </li>
 
@@ -118,40 +118,40 @@ export default function ContactPage() {
                     href={`tel:${contactInfo.phone}`}
                     className="flex items-start gap-4 p-5 rounded-2xl card-seedly group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-primary/15 border border-primary/20 flex items-center justify-center shrink-0">
-                      <Phone className="w-5 h-5 text-accent" aria-hidden="true" />
+                    <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-primary/20 flex items-center justify-center shrink-0">
+                      <Phone className="w-5 h-5 text-[#7F9FF1]" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="font-semibold text-white text-sm group-hover:text-accent transition-colors">
+                      <p className="font-semibold text-white text-sm group-hover:text-[#7F9FF1] transition-colors">
                         Téléphone
                       </p>
-                      <p className="text-neutral-400 text-sm">{contactInfo.phone}</p>
+                      <p className="text-[#9A9A93] text-sm">{contactInfo.phone}</p>
                     </div>
-                    <ArrowRight className="w-4 h-4 text-neutral-600 group-hover:text-accent ml-auto mt-1 transition-all group-hover:translate-x-1" aria-hidden="true" />
+                    <ArrowRight className="w-4 h-4 text-[#9A9A93] group-hover:text-[#7F9FF1] ml-auto mt-1 transition-all group-hover:translate-x-1" aria-hidden="true" />
                   </a>
                 </li>
 
                 <li>
                   <div className="flex items-start gap-4 p-5 rounded-2xl card-seedly">
-                    <div className="w-10 h-10 rounded-xl bg-primary/15 border border-primary/20 flex items-center justify-center shrink-0">
-                      <MapPin className="w-5 h-5 text-accent" aria-hidden="true" />
+                    <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-primary/20 flex items-center justify-center shrink-0">
+                      <MapPin className="w-5 h-5 text-[#7F9FF1]" aria-hidden="true" />
                     </div>
                     <div>
                       <p className="font-semibold text-white text-sm">Localisation</p>
-                      <p className="text-neutral-400 text-sm">{contactInfo.address}</p>
+                      <p className="text-[#9A9A93] text-sm">{contactInfo.address}</p>
                     </div>
                   </div>
                 </li>
               </ul>
 
               {/* Horaires */}
-              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/3 border border-white/5">
-                <Clock className="w-4 h-4 text-neutral-500 shrink-0 mt-0.5" aria-hidden="true" />
+              <div className="flex items-start gap-3 p-4 rounded-xl bg-white/3 border border-white/8">
+                <Clock className="w-4 h-4 text-[#62666A] shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
-                  <p className="text-sm font-medium text-neutral-300">
+                  <p className="text-sm font-medium text-[#F4F3EF]">
                     Disponibilité
                   </p>
-                  <p className="text-xs text-neutral-500 mt-0.5">
+                  <p className="text-xs text-[#62666A] mt-0.5">
                     Du lundi au vendredi, 8h — 18h (GMT)
                     <br />
                     Réponse sous 24h garantie
@@ -170,7 +170,7 @@ export default function ContactPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.label}
-                      className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-white/10 text-neutral-400 hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-200 text-sm"
+                      className="flex items-center gap-2 px-4 py-2.5 rounded-xl border border-white/10 text-[#9A9A93] hover:text-[#7F9FF1] hover:border-accent/30 hover:bg-[#4169E1]/5 transition-all duration-200 text-sm"
                     >
                       <SocialIcon platform={social.icon} />
                       <span className="text-xs">{social.platform}</span>
@@ -186,7 +186,7 @@ export default function ContactPage() {
                 <h2 className="text-xl font-bold text-white">
                   Vous avez un projet ?
                 </h2>
-                <p className="text-neutral-400 text-sm leading-relaxed">
+                <p className="text-[#9A9A93] text-sm leading-relaxed">
                   Pour un projet structuré, notre formulaire de devis est le meilleur
                   point de départ. Il nous permet de mieux comprendre votre besoin
                   et de vous répondre avec précision.
@@ -203,10 +203,10 @@ export default function ContactPage() {
 
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
-                  <div className="w-full border-t border-white/5" />
+                  <div className="w-full border-t border-white/8" />
                 </div>
                 <div className="relative flex justify-center">
-                  <span className="px-3 bg-surface-card text-xs text-neutral-600">ou</span>
+                  <span className="px-3 bg-surface-card text-xs text-[#9A9A93]">ou</span>
                 </div>
               </div>
 
@@ -220,7 +220,7 @@ export default function ContactPage() {
                 Écrire sur WhatsApp
               </a>
 
-              <p className="text-xs text-neutral-600 text-center">
+              <p className="text-xs text-[#9A9A93] text-center">
                 La première consultation est gratuite et sans engagement.
               </p>
             </div>

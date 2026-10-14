@@ -4,35 +4,30 @@
 
 /* =============================================
    SEEDLY TECHNOLOGY & APPS
-   Palette : Blanc cassé #F4F3EF · Anthracite #202326 · Bleu #4169E1
-   Police  : Geist Variable Font (locale)
+   Design sombre premium · Bleu électrique #4169E1
+   Police : Geist Variable Font (locale)
    ============================================= */
 
 @layer base {
   :root {
-    --background:     #F4F3EF;
-    --foreground:     #202326;
+    --background:     #0A0B0E;
+    --foreground:     #F4F3EF;
     --primary:        #4169E1;
     --primary-dark:   #2F52C8;
-    --primary-light:  #EEF1FD;
-    --surface:        #FFFFFF;
-    --surface-alt:    #F4F3EF;
-    --border:         #DADAD5;
+    --primary-light:  rgba(65,105,225,0.12);
+    --surface:        #14161A;
+    --surface-card:   #1C1F26;
+    --border:         rgba(255,255,255,0.08);
     --border-focus:   #4169E1;
-    --text-primary:   #202326;
-    --text-secondary: #62666A;
-    --text-muted:     #9A9A93;
+    --text-primary:   #F4F3EF;
+    --text-secondary: #9A9A93;
+    --text-muted:     #62666A;
 
     --header-height: 4.5rem;
     --max-width:     1280px;
-    --radius-card:   1rem;
   }
 
-  *, *::before, *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+  *, *::before, *::after { box-sizing: border-box; padding: 0; margin: 0; }
 
   html {
     scroll-behavior: smooth;
@@ -52,15 +47,13 @@
     overflow-x: hidden;
   }
 
-  /* ── Hiérarchie typographique ─────────────────────── */
   h1 {
     font-weight: 700;
     font-size: clamp(2.25rem, 5.5vw, 4rem);
-    line-height: 1.08;
+    line-height: 1.06;
     letter-spacing: -0.035em;
     color: var(--text-primary);
   }
-
   h2 {
     font-weight: 600;
     font-size: clamp(1.625rem, 3.5vw, 2.5rem);
@@ -68,7 +61,6 @@
     letter-spacing: -0.025em;
     color: var(--text-primary);
   }
-
   h3 {
     font-weight: 600;
     font-size: clamp(1.125rem, 2.5vw, 1.5rem);
@@ -76,19 +68,13 @@
     letter-spacing: -0.018em;
     color: var(--text-primary);
   }
-
   h4, h5, h6 {
     font-weight: 500;
     line-height: 1.4;
     letter-spacing: -0.01em;
     color: var(--text-primary);
   }
-
-  p {
-    line-height: 1.75;
-    color: var(--text-secondary);
-  }
-
+  p { line-height: 1.75; color: var(--text-secondary); }
   a { color: inherit; text-decoration: none; }
 
   :focus-visible {
@@ -99,13 +85,10 @@
 
   ::-webkit-scrollbar       { width: 5px; }
   ::-webkit-scrollbar-track { background: var(--background); }
-  ::-webkit-scrollbar-thumb { background: #DADAD5; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb { background: #2a2d34; border-radius: 3px; }
   ::-webkit-scrollbar-thumb:hover { background: #4169E1; }
 
-  ::selection {
-    background: rgba(65, 105, 225, 0.12);
-    color: var(--text-primary);
-  }
+  ::selection { background: rgba(65,105,225,0.25); color: var(--text-primary); }
 
   @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -116,29 +99,22 @@
   }
 }
 
-/* ============================================================
-   COMPOSANTS
-   ============================================================ */
 @layer components {
 
-  /* ── Container ──────────────────────────────────────── */
   .container-seedly {
     @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
     max-width: var(--max-width);
   }
 
-  /* ── Sections ───────────────────────────────────────── */
   .section-padding    { @apply py-16 md:py-24 lg:py-32; }
   .section-padding-sm { @apply py-12 md:py-16 lg:py-20; }
 
-  /* ── Label de section ───────────────────────────────── */
   .section-label {
-    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest;
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase;
     color: var(--primary);
-    letter-spacing: 0.1em;
+    letter-spacing: 0.12em;
   }
 
-  /* ── Titre de section ───────────────────────────────── */
   .section-title {
     font-weight: 700;
     font-size: clamp(1.875rem, 3.5vw, 2.75rem);
@@ -147,25 +123,24 @@
     color: var(--text-primary);
   }
 
-  /* ── Description de section ─────────────────────────── */
   .section-description {
     @apply text-lg leading-relaxed max-w-2xl;
     color: var(--text-secondary);
   }
 
-  /* ── Cartes ─────────────────────────────────────────── */
+  /* Cartes */
   .card-seedly {
-    @apply rounded-2xl border bg-white transition-all duration-200;
+    @apply rounded-2xl border transition-all duration-200;
+    background: var(--surface-card);
     border-color: var(--border);
-    box-shadow: 0 2px 8px rgba(32,35,38,0.06);
   }
   .card-seedly:hover {
-    box-shadow: 0 8px 32px rgba(32,35,38,0.10);
+    border-color: rgba(65,105,225,0.30);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.40);
     transform: translateY(-2px);
-    border-color: #C4C4BD;
   }
 
-  /* ── Badges ─────────────────────────────────────────── */
+  /* Badges */
   .badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full;
     font-size: 0.75rem;
@@ -173,32 +148,32 @@
   }
   .badge-primary {
     @apply badge;
-    background: var(--primary-light);
-    color: var(--primary);
-    border: 1px solid rgba(65,105,225,0.2);
+    background: rgba(65,105,225,0.15);
+    color: #7F9FF1;
+    border: 1px solid rgba(65,105,225,0.25);
   }
   .badge-neutral {
     @apply badge;
-    background: #F4F3EF;
+    background: rgba(255,255,255,0.05);
     color: var(--text-secondary);
     border: 1px solid var(--border);
   }
 
-  /* ── Texte gradient (bleu) ───────────────────────────── */
+  /* Gradient texte */
   .text-gradient {
-    background: linear-gradient(135deg, #4169E1 0%, #2F52C8 100%);
+    background: linear-gradient(135deg, #7F9FF1 0%, #4169E1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  /* ── Motif de points décoratif ───────────────────────── */
+  /* Motif de points */
   .dot-pattern {
-    background-image: radial-gradient(circle, #DADAD5 1px, transparent 1px);
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
     background-size: 24px 24px;
   }
 
-  /* ── Grille de fond légère ───────────────────────────── */
+  /* Grille décorative */
   .grid-bg {
     background-image:
       linear-gradient(rgba(65,105,225,0.04) 1px, transparent 1px),
@@ -206,15 +181,7 @@
     background-size: 64px 64px;
   }
 
-  /* ── Divider décoratif ───────────────────────────────── */
-  .divider-accent {
-    @apply w-10 h-0.5 rounded-full;
-    background: var(--primary);
-  }
-
-  /* ================================================================
-     BOUTONS
-     ================================================================ */
+  /* Boutons */
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-xl
            transition-all duration-200 cursor-pointer select-none;
@@ -229,32 +196,29 @@
   .btn-md  { @apply btn px-5 py-2.5;  font-size: 0.9375rem; }
   .btn-lg  { @apply btn px-7 py-3.5;  font-size: 1rem; font-weight: 600; }
 
-  /* Bouton primaire — Bleu électrique */
   .btn-primary {
     background: var(--primary);
     color: #fff;
-    box-shadow: 0 1px 3px rgba(65,105,225,0.25);
+    box-shadow: 0 1px 3px rgba(65,105,225,0.30);
   }
   .btn-primary:hover {
     background: var(--primary-dark);
-    box-shadow: 0 4px 16px rgba(65,105,225,0.35);
+    box-shadow: 0 4px 20px rgba(65,105,225,0.40);
     transform: translateY(-1px);
   }
 
-  /* Bouton accent = alias bouton primaire */
   .btn-accent {
     background: var(--primary);
     color: #fff;
     font-weight: 600;
-    box-shadow: 0 1px 3px rgba(65,105,225,0.25);
+    box-shadow: 0 1px 3px rgba(65,105,225,0.30);
   }
   .btn-accent:hover {
     background: var(--primary-dark);
-    box-shadow: 0 4px 16px rgba(65,105,225,0.35);
+    box-shadow: 0 4px 20px rgba(65,105,225,0.40);
     transform: translateY(-1px);
   }
 
-  /* Bouton outline — bordure anthracite */
   .btn-outline {
     background: transparent;
     color: var(--text-primary);
@@ -262,27 +226,24 @@
   }
   .btn-outline:hover {
     border-color: var(--primary);
-    color: var(--primary);
-    background: var(--primary-light);
+    color: #7F9FF1;
+    background: rgba(65,105,225,0.08);
   }
 
-  /* Bouton ghost */
   .btn-ghost {
     background: transparent;
     color: var(--text-secondary);
   }
   .btn-ghost:hover {
     color: var(--text-primary);
-    background: #F4F3EF;
+    background: rgba(255,255,255,0.05);
   }
 
-  /* ================================================================
-     INPUTS
-     ================================================================ */
+  /* Inputs */
   .input-seedly {
     @apply w-full px-4 py-3 rounded-xl text-sm transition-all duration-200;
     font-family: var(--font-geist), system-ui, sans-serif;
-    background: #fff;
+    background: rgba(255,255,255,0.04);
     border: 1.5px solid var(--border);
     color: var(--text-primary);
     outline: none;
@@ -290,25 +251,20 @@
   .input-seedly::placeholder { color: var(--text-muted); }
   .input-seedly:focus {
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(65,105,225,0.12);
+    background: rgba(65,105,225,0.06);
+    box-shadow: 0 0 0 3px rgba(65,105,225,0.15);
   }
   .input-seedly.error {
     border-color: #DC2626;
-    box-shadow: 0 0 0 3px rgba(220,38,38,0.10);
+    box-shadow: 0 0 0 3px rgba(220,38,38,0.12);
   }
 }
 
-/* ============================================================
-   UTILITAIRES
-   ============================================================ */
 @layer utilities {
   .text-balance { text-wrap: balance; }
   .text-pretty  { text-wrap: pretty; }
 
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
   .scrollbar-hide::-webkit-scrollbar { display: none; }
 
   .line-clamp-2 {

@@ -45,7 +45,7 @@ export const Footer: React.FC = () => {
           {/* Marque */}
           <div className="lg:col-span-1 space-y-5">
             <Logo size="md" showTagline />
-            <p className="text-sm text-neutral-400 leading-relaxed max-w-xs">
+            <p className="text-sm text-[#9A9A93] leading-relaxed max-w-xs">
               {companyInfo.description}
             </p>
             <div className="flex items-center gap-2.5" aria-label="Réseaux sociaux Seedly">
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 border border-white/10 text-neutral-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
+                  className="flex items-center justify-center w-9 h-9 rounded-lg bg-white/5 border border-white/10 text-[#9A9A93] hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-200"
                 >
                   <SocialIcon platform={social.icon} />
                 </a>
@@ -70,7 +70,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3" role="list">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">
+                  <Link href={link.href} className="text-sm text-[#9A9A93] hover:text-white transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>
@@ -84,7 +84,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-3" role="list">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-neutral-400 hover:text-white transition-colors duration-200">
+                  <Link href={link.href} className="text-sm text-[#9A9A93] hover:text-white transition-colors duration-200">
                     {link.label}
                   </Link>
                 </li>
@@ -97,19 +97,19 @@ export const Footer: React.FC = () => {
             <h3 className="text-xs font-semibold text-white uppercase tracking-widest">Contact</h3>
             <ul className="space-y-3.5" role="list">
               <li>
-                <a href={`mailto:${contactInfo.email}`} className="flex items-start gap-3 text-sm text-neutral-400 hover:text-white transition-colors group">
+                <a href={`mailto:${contactInfo.email}`} className="flex items-start gap-3 text-sm text-[#9A9A93] hover:text-white transition-colors group">
                   <Mail className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
                   <span>{contactInfo.email}</span>
                 </a>
               </li>
               <li>
-                <a href={`tel:${contactInfo.phone}`} className="flex items-start gap-3 text-sm text-neutral-400 hover:text-white transition-colors group">
+                <a href={`tel:${contactInfo.phone}`} className="flex items-start gap-3 text-sm text-[#9A9A93] hover:text-white transition-colors group">
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
                   <span>{contactInfo.phone}</span>
                 </a>
               </li>
               <li>
-                <div className="flex items-start gap-3 text-sm text-neutral-400">
+                <div className="flex items-start gap-3 text-sm text-[#9A9A93]">
                   <MapPin className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
                   <span>{contactInfo.address}</span>
                 </div>
@@ -152,13 +152,13 @@ export const Footer: React.FC = () => {
       <div className="border-t border-white/10">
         <div className="container-seedly py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-neutral-500">
+            <p className="text-xs text-[#62666A]">
               © {currentYear} {companyInfo.name}. Tous droits réservés.
             </p>
             <ul className="flex items-center gap-5" role="list">
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors">
+                  <Link href={link.href} className="text-xs text-[#62666A] hover:text-[#F4F3EF] transition-colors">
                     {link.label}
                   </Link>
                 </li>

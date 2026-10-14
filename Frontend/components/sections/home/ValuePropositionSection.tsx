@@ -11,7 +11,7 @@ const pillars = [
 
 export const ValuePropositionSection: React.FC = () => {
   return (
-    <section className="section-padding bg-white" aria-labelledby="value-prop-title">
+    <section className="section-padding bg-[#14161A]" aria-labelledby="value-prop-title">
       <div className="container-seedly">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
@@ -31,10 +31,10 @@ export const ValuePropositionSection: React.FC = () => {
                 "Nous restons disponibles même après la livraison.",
               ].map((point, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#EEF1FD] border border-[#4169E1]/20 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-5 h-5 rounded-full bg-[#4169E1]/15 border border-[#4169E1]/20 flex items-center justify-center shrink-0 mt-0.5">
                     <div className="w-1.5 h-1.5 rounded-full bg-[#4169E1]" />
                   </div>
-                  <p className="text-[#62666A] text-sm leading-relaxed">{point}</p>
+                  <p className="text-[#9A9A93] text-sm leading-relaxed">{point}</p>
                 </div>
               ))}
             </div>

@@ -21,14 +21,14 @@ export default function RealisationsPage() {
   return (
     <MainLayout>
       {/* Hero */}
-      <section className="pt-32 pb-16 relative" aria-labelledby="portfolio-title">
-        <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
+      <section className="pt-32 pb-16 relative bg-[#0A0B0E]" aria-labelledby="portfolio-title">
+        <div className="absolute inset-0 dot-pattern opacity-40" aria-hidden="true" />
         <div className="container-seedly relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="section-label justify-center">
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-5 h-px bg-[#4169E1]" aria-hidden="true" />
               Portfolio
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-5 h-px bg-[#4169E1]" aria-hidden="true" />
             </div>
             <h1 id="portfolio-title" className="section-title text-4xl md:text-5xl">
               Nos réalisations
@@ -48,7 +48,7 @@ export default function RealisationsPage() {
           {hasDemoProjects && (
             <div className="mb-8 flex items-start gap-3 p-4 rounded-xl bg-yellow-500/5 border border-yellow-500/15">
               <AlertCircle className="w-4 h-4 text-yellow-500 shrink-0 mt-0.5" aria-hidden="true" />
-              <p className="text-sm text-neutral-400">
+              <p className="text-sm text-[#9A9A93]">
                 <span className="text-yellow-400 font-medium">Note :</span>{" "}
                 Certains projets présentés sont des démonstrations de nos capacités.
                 Nos réalisations réelles seront ajoutées au fur et à mesure.
@@ -69,8 +69,8 @@ export default function RealisationsPage() {
                 onClick={() => setActiveCategory(cat.id)}
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   activeCategory === cat.id
-                    ? "bg-primary text-white border border-primary/50"
-                    : "bg-white/5 text-neutral-400 border border-white/5 hover:text-white hover:bg-white/10"
+                    ? "bg-[#4169E1] text-white border border-[#4169E1]/50"
+                    : "bg-white/5 text-[#9A9A93] border border-white/8 hover:text-white hover:bg-white/10"
                 }`}
                 aria-pressed={activeCategory === cat.id}
               >
@@ -88,7 +88,7 @@ export default function RealisationsPage() {
                   className="card-seedly overflow-hidden group"
                 >
                   {/* Image */}
-                  <div className="relative h-48 bg-gradient-to-br from-primary/20 to-surface overflow-hidden">
+                  <div className="relative h-48 bg-[#1C1F26] overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="text-5xl opacity-10">
                         {project.category === "web" && "🌐"}
@@ -105,21 +105,21 @@ export default function RealisationsPage() {
                         </span>
                       </div>
                     )}
-                    <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="absolute inset-0 bg-[#4169E1]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
                   {/* Contenu */}
                   <div className="p-5 space-y-3">
                     <div className="flex items-center justify-between">
                       <Badge variant="primary">{project.categoryLabel}</Badge>
-                      <span className="text-xs text-neutral-600">{project.year}</span>
+                      <span className="text-xs text-[#9A9A93]">{project.year}</span>
                     </div>
 
-                    <h2 className="font-bold text-white text-base leading-snug group-hover:text-accent transition-colors">
+                    <h2 className="font-bold text-[#F4F3EF] text-base leading-snug group-hover:text-[#7F9FF1] transition-colors">
                       {project.title}
                     </h2>
 
-                    <p className="text-sm text-neutral-400 leading-relaxed line-clamp-2">
+                    <p className="text-sm text-[#9A9A93] leading-relaxed line-clamp-2">
                       {project.shortDescription}
                     </p>
 
@@ -128,7 +128,7 @@ export default function RealisationsPage() {
                         {project.technologies.map((tech) => (
                           <span
                             key={tech.name}
-                            className="px-2 py-0.5 rounded text-xs text-neutral-500 bg-white/5 border border-white/5"
+                            className="px-2 py-0.5 rounded text-xs text-[#62666A] bg-white/5 border border-white/8"
                           >
                             {tech.name}
                           </span>
@@ -136,10 +136,10 @@ export default function RealisationsPage() {
                       </div>
                     )}
 
-                    <div className="pt-2 border-t border-white/5">
+                    <div className="pt-2 border-t border-white/8">
                       <Link
                         href={`/realisations/${project.slug}`}
-                        className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-400 hover:text-accent transition-colors"
+                        className="inline-flex items-center gap-1.5 text-xs font-medium text-[#9A9A93] hover:text-[#7F9FF1] transition-colors"
                         aria-label={`Voir le détail du projet ${project.title}`}
                       >
                         Voir le détail
@@ -152,7 +152,7 @@ export default function RealisationsPage() {
             </div>
           ) : (
             <div className="py-20 text-center">
-              <p className="text-neutral-500">
+              <p className="text-[#62666A]">
                 Aucun projet dans cette catégorie pour le moment.
               </p>
             </div>

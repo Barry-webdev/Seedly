@@ -13,7 +13,7 @@ const serviceIcons: Record<string, React.ReactNode> = {
 
 export const ServicesSection: React.FC = () => {
   return (
-    <section className="section-padding bg-canvas" aria-labelledby="services-title">
+    <section className="section-padding bg-[#0A0B0E]" aria-labelledby="services-title">
       <div className="container-seedly">
         <SectionHeader
           label="Ce que nous faisons"
@@ -31,26 +31,26 @@ export const ServicesSection: React.FC = () => {
             >
               <div className="flex flex-col h-full gap-5">
                 <div className="flex items-start justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-[#EEF1FD] flex items-center justify-center text-[#4169E1] group-hover:bg-[#4169E1] group-hover:text-white transition-all duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-[#4169E1]/10 flex items-center justify-center text-[#7F9FF1] group-hover:bg-[#4169E1] group-hover:text-white transition-all duration-300">
                     {serviceIcons[service.icon] ?? <Monitor className="w-6 h-6" />}
                   </div>
                   <span className="text-xs font-mono text-[#9A9A93]">0{index + 1}</span>
                 </div>
                 <div className="flex-1 space-y-2">
-                  <h3 className="text-lg font-bold text-[#202326] group-hover:text-[#4169E1] transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-[#F4F3EF] group-hover:text-[#7F9FF1] transition-colors duration-200">
                     {service.shortTitle}
                   </h3>
-                  <p className="text-sm text-[#62666A] leading-relaxed">{service.shortDescription}</p>
+                  <p className="text-sm text-[#9A9A93] leading-relaxed">{service.shortDescription}</p>
                 </div>
                 <ul className="space-y-1.5">
                   {service.deliverables.slice(0, 3).map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-xs text-[#9A9A93]">
-                      <span className="w-1 h-1 rounded-full bg-[#4169E1]/50 shrink-0" aria-hidden="true" />
+                    <li key={i} className="flex items-center gap-2 text-xs text-[#62666A]">
+                      <span className="w-1 h-1 rounded-full bg-[#4169E1]/40 shrink-0" aria-hidden="true" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center gap-2 text-sm font-medium text-[#9A9A93] group-hover:text-[#4169E1] transition-colors pt-2 border-t border-[#DADAD5]">
+                <div className="flex items-center gap-2 text-sm font-medium text-[#62666A] group-hover:text-[#7F9FF1] transition-colors pt-2 border-t border-white/8">
                   <span>En savoir plus</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </div>

@@ -17,9 +17,9 @@ export default function DevisPage() {
         <div className="container-seedly relative z-10">
           <div className="max-w-2xl mx-auto text-center space-y-5">
             <div className="section-label justify-center">
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-6 h-0.5 rounded-full bg-[#4169E1]" aria-hidden="true" />
               Sans engagement
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-6 h-0.5 rounded-full bg-[#4169E1]" aria-hidden="true" />
             </div>
             <h1 id="devis-title" className="section-title text-4xl md:text-5xl">
               Demander un devis

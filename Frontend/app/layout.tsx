@@ -98,7 +98,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className={geist.variable} suppressHydrationWarning>
-      <body className="bg-canvas text-ink antialiased min-h-screen">
+      <body className="bg-[#0A0B0E] text-[#F4F3EF] antialiased min-h-screen">
         {children}
       </body>
     </html>

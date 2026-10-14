@@ -30,11 +30,11 @@ export default function AboutPage() {
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="pt-32 pb-20 relative" aria-labelledby="about-title">
         <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
-        <div className="absolute top-20 right-0 w-96 h-96 rounded-full bg-primary/10 blur-3xl" aria-hidden="true" />
+        <div className="absolute top-20 right-0 w-96 h-96 rounded-full bg-[#4169E1]/10 blur-3xl" aria-hidden="true" />
         <div className="container-seedly relative z-10">
           <div className="max-w-3xl space-y-6">
             <div className="section-label">
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-6 h-0.5 rounded-full bg-[#4169E1]" aria-hidden="true" />
               Notre histoire
             </div>
             <h1 id="about-title" className="section-title text-4xl md:text-5xl lg:text-6xl">
@@ -52,14 +52,14 @@ export default function AboutPage() {
         <div className="container-seedly">
           <div className="grid lg:grid-cols-2 gap-6">
             <div className="card-seedly p-8 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-primary/15 border border-primary/20 flex items-center justify-center text-2xl">🌱</div>
+              <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-primary/20 flex items-center justify-center text-2xl">🌱</div>
               <h2 id="mission-title" className="text-xl font-bold text-white">Notre mission</h2>
-              <p className="text-neutral-400 leading-relaxed">{companyInfo.mission}</p>
+              <p className="text-[#9A9A93] leading-relaxed">{companyInfo.mission}</p>
             </div>
             <div className="card-seedly p-8 space-y-4">
-              <div className="w-10 h-10 rounded-xl bg-accent/15 border border-accent/20 flex items-center justify-center text-2xl">🎯</div>
+              <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-accent/20 flex items-center justify-center text-2xl">🎯</div>
               <h2 className="text-xl font-bold text-white">Notre vision</h2>
-              <p className="text-neutral-400 leading-relaxed">{companyInfo.vision}</p>
+              <p className="text-[#9A9A93] leading-relaxed">{companyInfo.vision}</p>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ export default function AboutPage() {
                 <div key={item.title} className="card-seedly p-6 text-center space-y-3">
                   <span className="text-3xl">{item.emoji}</span>
                   <h3 className="font-bold text-white">{item.title}</h3>
-                  <p className="text-sm text-neutral-400 leading-relaxed">{item.description}</p>
+                  <p className="text-sm text-[#9A9A93] leading-relaxed">{item.description}</p>
                 </div>
               ))}
             </div>
@@ -102,11 +102,11 @@ export default function AboutPage() {
           <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {companyValues.map((value) => (
               <div key={value.id} className="card-seedly p-6 space-y-4 group">
-                <div className="w-10 h-10 rounded-xl bg-primary/15 border border-primary/20 flex items-center justify-center text-accent group-hover:bg-primary/25 transition-colors">
+                <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 border border-primary/20 flex items-center justify-center text-[#7F9FF1] group-hover:bg-primary/25 transition-colors">
                   {valueIcons[value.icon] ?? <Star className="w-5 h-5" />}
                 </div>
                 <h3 className="font-bold text-white">{value.title}</h3>
-                <p className="text-sm text-neutral-400 leading-relaxed">{value.description}</p>
+                <p className="text-sm text-[#9A9A93] leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>
@@ -151,7 +151,7 @@ export default function AboutPage() {
                           className="w-full h-full object-cover"
                         />
                       ) : (
-                        <div className="w-full h-full flex items-center justify-center text-3xl bg-primary/10">
+                        <div className="w-full h-full flex items-center justify-center text-3xl bg-[#4169E1]/10">
                           👤
                         </div>
                       )}
@@ -160,7 +160,7 @@ export default function AboutPage() {
                       <h3 className="font-bold text-white text-lg leading-tight">
                         {member.name}
                       </h3>
-                      <p className="text-xs text-accent font-medium mt-1 leading-snug">
+                      <p className="text-xs text-[#7F9FF1] font-medium mt-1 leading-snug">
                         {member.role}
                       </p>
                     </div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
 
                   {/* Bio */}
                   {member.bio && (
-                    <p className="text-sm text-neutral-400 leading-relaxed">
+                    <p className="text-sm text-[#9A9A93] leading-relaxed">
                       {member.bio}
                     </p>
                   )}
@@ -187,12 +187,12 @@ export default function AboutPage() {
                       </svg>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs text-neutral-500 leading-none mb-0.5">WhatsApp</p>
+                      <p className="text-xs text-[#62666A] leading-none mb-0.5">WhatsApp</p>
                       <p className="text-sm font-medium text-green-400 group-hover/wa:text-green-300 transition-colors">
                         {displayNumber}
                       </p>
                     </div>
-                    <svg className="w-4 h-4 text-neutral-600 group-hover/wa:text-green-400 transition-colors shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <svg className="w-4 h-4 text-[#9A9A93] group-hover/wa:text-green-400 transition-colors shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>

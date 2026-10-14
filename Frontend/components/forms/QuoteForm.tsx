@@ -62,7 +62,7 @@ interface FieldWrapperProps {
 
 const FieldWrapper: React.FC<FieldWrapperProps> = ({ label, htmlFor, required, error, children }) => (
   <div className="space-y-1.5">
-    <label htmlFor={htmlFor} className="block text-sm font-medium text-neutral-300">
+    <label htmlFor={htmlFor} className="block text-sm font-medium text-[#F4F3EF]">
       {label}
       {required && <span className="text-red-400 ml-1" aria-label="champ obligatoire">*</span>}
     </label>
@@ -162,7 +162,7 @@ export const QuoteForm: React.FC = () => {
         </div>
         <div className="space-y-2">
           <h2 className="text-xl font-bold text-white">Demande reçue !</h2>
-          <p className="text-neutral-400 text-sm leading-relaxed">
+          <p className="text-[#9A9A93] text-sm leading-relaxed">
             Merci pour votre message. Nous vous répondrons dans les 24 heures.
           </p>
         </div>
@@ -196,7 +196,7 @@ export const QuoteForm: React.FC = () => {
 
         {/* Coordonnées */}
         <fieldset className="space-y-4">
-          <legend className="text-sm font-semibold text-white uppercase tracking-wider pb-2 border-b border-white/5 w-full">
+          <legend className="text-sm font-semibold text-white uppercase tracking-wider pb-2 border-b border-white/8 w-full">
             Vos coordonnées
           </legend>
 
@@ -239,13 +239,13 @@ export const QuoteForm: React.FC = () => {
 
         {/* Projet */}
         <fieldset className="space-y-4">
-          <legend className="text-sm font-semibold text-white uppercase tracking-wider pb-2 border-b border-white/5 w-full">
+          <legend className="text-sm font-semibold text-white uppercase tracking-wider pb-2 border-b border-white/8 w-full">
             Votre projet
           </legend>
 
           {/* Type de service — cards cliquables */}
           <div className="space-y-2">
-            <p className="text-sm font-medium text-neutral-300">
+            <p className="text-sm font-medium text-[#F4F3EF]">
               Type de service <span className="text-red-400 ml-1">*</span>
             </p>
             <div
@@ -265,12 +265,12 @@ export const QuoteForm: React.FC = () => {
                     "flex flex-col items-center gap-2 p-4 rounded-xl border text-sm font-medium transition-all duration-200 cursor-pointer",
                     formData.serviceType === option.value
                       ? "bg-primary/20 border-accent text-white"
-                      : "bg-white/3 border-white/10 text-neutral-400 hover:border-white/30 hover:text-white hover:bg-white/5"
+                      : "bg-white/3 border-white/10 text-[#9A9A93] hover:border-white/30 hover:text-white hover:bg-white/5"
                   )}
                 >
                   <span className={cn(
                     "transition-colors",
-                    formData.serviceType === option.value ? "text-accent" : "text-neutral-500"
+                    formData.serviceType === option.value ? "text-[#7F9FF1]" : "text-[#62666A]"
                   )}>
                     {option.icon}
                   </span>
@@ -293,7 +293,7 @@ export const QuoteForm: React.FC = () => {
               className={`input-seedly resize-none ${errors.projectDescription ? "error" : ""}`}
               aria-required="true" aria-describedby={errors.projectDescription ? "projectDescription-error" : undefined}
               aria-invalid={!!errors.projectDescription} />
-            <p className="text-xs text-neutral-600 mt-1">
+            <p className="text-xs text-[#9A9A93] mt-1">
               {formData.projectDescription.length} caractère{formData.projectDescription.length !== 1 ? "s" : ""}
               {formData.projectDescription.length < 30 && " — minimum 30"}
             </p>
@@ -302,9 +302,9 @@ export const QuoteForm: React.FC = () => {
 
         {/* Informations complémentaires */}
         <fieldset className="space-y-4">
-          <legend className="text-sm font-semibold text-white uppercase tracking-wider pb-2 border-b border-white/5 w-full">
+          <legend className="text-sm font-semibold text-white uppercase tracking-wider pb-2 border-b border-white/8 w-full">
             Informations complémentaires{" "}
-            <span className="text-neutral-600 font-normal text-xs normal-case tracking-normal">(facultatif)</span>
+            <span className="text-[#9A9A93] font-normal text-xs normal-case tracking-normal">(facultatif)</span>
           </legend>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -363,7 +363,7 @@ export const QuoteForm: React.FC = () => {
           )}
         </button>
 
-        <p className="text-xs text-neutral-600 text-center">
+        <p className="text-xs text-[#9A9A93] text-center">
           En soumettant ce formulaire, vous acceptez que Seedly vous contacte concernant votre projet.
           Aucun engagement de votre part.
         </p>

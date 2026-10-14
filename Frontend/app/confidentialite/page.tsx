@@ -19,7 +19,7 @@ export default function ConfidentialitePage() {
               <h1 className="section-title text-3xl md:text-4xl">
                 Politique de confidentialité
               </h1>
-              <p className="text-neutral-500 text-sm">
+              <p className="text-[#62666A] text-sm">
                 Dernière mise à jour : à compléter
               </p>
             </div>
@@ -76,12 +76,12 @@ export default function ConfidentialitePage() {
               },
             ].map((section) => (
               <section key={section.title} className="space-y-3">
-                <h2 className="text-lg font-bold text-white border-b border-white/5 pb-2">
+                <h2 className="text-lg font-bold text-white border-b border-white/8 pb-2">
                   {section.title}
                 </h2>
                 <div className="space-y-2">
                   {section.content.map((line, i) => (
-                    <p key={i} className="text-sm text-neutral-400 leading-relaxed">
+                    <p key={i} className="text-sm text-[#9A9A93] leading-relaxed">
                       {line}
                     </p>
                   ))}

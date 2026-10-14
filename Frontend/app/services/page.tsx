@@ -23,14 +23,14 @@ export default function ServicesPage() {
   return (
     <MainLayout>
       {/* Hero */}
-      <section className="pt-32 pb-16 relative" aria-labelledby="services-page-title">
-        <div className="absolute inset-0 grid-bg opacity-30" aria-hidden="true" />
+      <section className="pt-32 pb-16 relative bg-[#0A0B0E]" aria-labelledby="services-page-title">
+        <div className="absolute inset-0 dot-pattern opacity-40" aria-hidden="true" />
         <div className="container-seedly relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <div className="section-label justify-center">
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-5 h-px bg-[#4169E1]" aria-hidden="true" />
               Ce que nous proposons
-              <span className="w-6 h-0.5 rounded-full bg-accent" aria-hidden="true" />
+              <span className="w-5 h-px bg-[#4169E1]" aria-hidden="true" />
             </div>
             <h1 id="services-page-title" className="section-title text-4xl md:text-5xl">
               Nos services
@@ -60,11 +60,11 @@ export default function ServicesPage() {
                 {/* En-tête service */}
                 <div className="space-y-4">
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-2xl bg-primary/15 border border-primary/20 flex items-center justify-center text-accent">
+                    <div className="w-14 h-14 rounded-2xl bg-[#4169E1]/10 flex items-center justify-center text-[#7F9FF1]">
                       {serviceIcons[service.icon]}
                     </div>
                     <div>
-                      <span className="text-xs font-semibold text-accent uppercase tracking-widest">
+                      <span className="text-xs font-semibold text-[#7F9FF1] uppercase tracking-widest">
                         Service 0{index + 1}
                       </span>
                       <h2 className="text-2xl md:text-3xl font-bold text-white mt-1">
@@ -72,7 +72,7 @@ export default function ServicesPage() {
                       </h2>
                     </div>
                   </div>
-                  <p className="text-neutral-400 leading-relaxed">{service.description}</p>
+                  <p className="text-[#9A9A93] leading-relaxed">{service.description}</p>
                 </div>
 
                 {/* Besoins */}
@@ -82,9 +82,9 @@ export default function ServicesPage() {
                   </h3>
                   <ul className="space-y-2" aria-label="Profils concernés">
                     {service.needs.map((need, i) => (
-                      <li key={i} className="flex items-start gap-2.5 text-sm text-neutral-400">
-                        <span className="w-4 h-4 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
-                          <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                      <li key={i} className="flex items-start gap-2.5 text-sm text-[#9A9A93]">
+                        <span className="w-4 h-4 rounded-full bg-[#4169E1]/15 flex items-center justify-center shrink-0 mt-0.5" aria-hidden="true">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#7F9FF1]" />
                         </span>
                         {need}
                       </li>
@@ -115,7 +115,7 @@ export default function ServicesPage() {
                     {service.features.map((feature, i) => (
                       <div key={i} className="space-y-1">
                         <h4 className="text-sm font-semibold text-white">{feature.title}</h4>
-                        <p className="text-xs text-neutral-500 leading-relaxed">{feature.description}</p>
+                        <p className="text-xs text-[#62666A] leading-relaxed">{feature.description}</p>
                       </div>
                     ))}
                   </div>
@@ -129,8 +129,8 @@ export default function ServicesPage() {
                   <ul className="space-y-2.5" aria-label="Bénéfices">
                     {service.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start gap-2.5">
-                        <Check className="w-4 h-4 text-accent shrink-0 mt-0.5" aria-hidden="true" />
-                        <span className="text-sm text-neutral-400">{benefit}</span>
+                        <Check className="w-4 h-4 text-[#7F9FF1] shrink-0 mt-0.5" aria-hidden="true" />
+                        <span className="text-sm text-[#9A9A93]">{benefit}</span>
                       </li>
                     ))}
                   </ul>

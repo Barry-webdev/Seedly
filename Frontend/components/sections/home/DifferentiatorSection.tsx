@@ -11,7 +11,7 @@ const differentiators = [
 
 export const DifferentiatorSection: React.FC = () => {
   return (
-    <section className="section-padding bg-white" aria-labelledby="diff-title">
+    <section className="section-padding bg-[#14161A]" aria-labelledby="diff-title">
       <div className="container-seedly">
         <SectionHeader
           label="Pourquoi Seedly"
@@ -20,20 +20,20 @@ export const DifferentiatorSection: React.FC = () => {
         />
 
         <blockquote className="mt-12 mb-12 max-w-2xl mx-auto text-center">
-          <p className="text-xl md:text-2xl font-semibold text-[#202326] leading-relaxed">
+          <p className="text-xl md:text-2xl font-semibold text-[#F4F3EF] leading-relaxed">
             &ldquo;Notre mission : planter une graine digitale dans chaque business guinéen.&rdquo;
           </p>
-          <footer className="mt-3 text-sm text-[#9A9A93]">— Seedly Technology &amp; Apps</footer>
+          <footer className="mt-3 text-sm text-[#62666A]">— Seedly Technology &amp; Apps</footer>
         </blockquote>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {differentiators.map((item, i) => (
             <div key={i} className="card-seedly p-6 space-y-4 group">
-              <div className="w-12 h-12 rounded-2xl bg-[#EEF1FD] flex items-center justify-center text-[#4169E1] group-hover:bg-[#4169E1] group-hover:text-white transition-all duration-300">
+              <div className="w-12 h-12 rounded-2xl bg-[#4169E1]/10 flex items-center justify-center text-[#7F9FF1] group-hover:bg-[#4169E1] group-hover:text-white transition-all duration-300">
                 {item.icon}
               </div>
-              <h3 className="font-bold text-[#202326] text-sm">{item.title}</h3>
-              <p className="text-xs text-[#62666A] leading-relaxed">{item.description}</p>
+              <h3 className="font-bold text-[#F4F3EF] text-sm">{item.title}</h3>
+              <p className="text-xs text-[#9A9A93] leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
