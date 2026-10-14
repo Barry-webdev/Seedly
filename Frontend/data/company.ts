@@ -127,7 +127,7 @@ export const teamMembers: TeamMember[] = [
     name: "Boubacar Bah",
     role: "Co-Founder & CEO",
     bio: "Co-fondateur de Seedly Technology & Apps, passionné par la technologie et le développement digital en Guinée.",
-    photo: "",
+    photo: "/Boubacar.jpeg",
   },
 ];
 
