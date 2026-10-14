@@ -155,7 +155,7 @@
 
   /* ── Cartes ─────────────────────────────────────────── */
   .card-seedly {
-    @apply rounded-2xl border bg-white transition-all duration-250;
+    @apply rounded-2xl border bg-white transition-all duration-200;
     border-color: var(--border);
     box-shadow: 0 2px 8px rgba(32,35,38,0.06);
   }

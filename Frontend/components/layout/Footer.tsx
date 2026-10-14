@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* ── CTA Banner ──────────────────────────────────── */}
-      <div className="border-t border-white/8">
+      <div className="border-t border-white/10">
         <div className="container-seedly py-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-5 p-6 rounded-2xl bg-[#4169E1]">
             <div>
@@ -149,7 +149,7 @@ export const Footer: React.FC = () => {
       </div>
 
       {/* ── Barre légale ────────────────────────────────── */}
-      <div className="border-t border-white/8">
+      <div className="border-t border-white/10">
         <div className="container-seedly py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-neutral-500">
