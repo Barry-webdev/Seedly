@@ -89,19 +89,21 @@ export default function RealisationsPage() {
                 >
                   {/* Image */}
                   <div className="relative h-48 bg-[#1C1F26] overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-5xl opacity-10">
-                        {project.category === "web" && "🌐"}
-                        {project.category === "mobile" && "📱"}
-                        {project.category === "design" && "🎨"}
-                        {project.category === "marketing" && "📈"}
-                        {project.category === "branding" && "✨"}
-                      </span>
-                    </div>
-                    {project.isDemo && (
-                      <div className="absolute top-3 left-3">
-                        <span className="px-2 py-1 rounded-md text-xs font-medium bg-yellow-500/15 text-yellow-400 border border-yellow-500/20">
-                          Démonstration
+                    {project.coverImage ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={project.coverImage}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <span className="text-5xl opacity-10">
+                          {project.category === "web" && "🌐"}
+                          {project.category === "mobile" && "📱"}
+                          {project.category === "design" && "🎨"}
+                          {project.category === "marketing" && "📈"}
+                          {project.category === "branding" && "✨"}
                         </span>
                       </div>
                     )}

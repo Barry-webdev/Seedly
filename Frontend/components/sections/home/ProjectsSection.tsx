@@ -30,17 +30,19 @@ export const ProjectsSection: React.FC = () => {
               <article key={project.id} className="card-seedly overflow-hidden group">
                 {/* Image */}
                 <div className="relative h-48 bg-[#1C1F26] overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center text-5xl opacity-20">
-                    {project.category === "web"       && "🌐"}
-                    {project.category === "mobile"    && "📱"}
-                    {project.category === "design"    && "🎨"}
-                    {project.category === "marketing" && "📈"}
-                  </div>
-                  {project.isDemo && (
-                    <div className="absolute top-3 left-3">
-                      <span className="px-2 py-1 rounded-md text-xs font-medium bg-amber-50 text-amber-600 border border-amber-200">
-                        Démonstration
-                      </span>
+                  {project.coverImage ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={project.coverImage}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-5xl opacity-20">
+                      {project.category === "web"       && "🌐"}
+                      {project.category === "mobile"    && "📱"}
+                      {project.category === "design"    && "🎨"}
+                      {project.category === "marketing" && "📈"}
                     </div>
                   )}
                   <div className="absolute inset-0 bg-[#4169E1]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
