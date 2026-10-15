@@ -74,6 +74,17 @@ export const ProjectsSection: React.FC = () => {
                     Voir le projet
                     <ExternalLink className="w-3 h-3" aria-hidden="true" />
                   </Link>
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-[#4169E1] hover:text-[#7F9FF1] transition-colors pt-1 ml-4"
+                    >
+                      Voir le site
+                      <ExternalLink className="w-3 h-3" aria-hidden="true" />
+                    </a>
+                  )}
                 </div>
               </article>
             ))}

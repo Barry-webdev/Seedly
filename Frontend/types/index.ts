@@ -65,6 +65,7 @@ export interface Project {
   shortDescription: string;
   description?: string;
   coverImage: string;
+  liveUrl?: string;
   images?: string[];
   technologies?: ProjectTech[];
   context?: string;
