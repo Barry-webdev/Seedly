@@ -33,7 +33,7 @@ export const Logo: React.FC<LogoProps> = ({
   const logoContent = (
     <div className={cn("flex items-center", className)}>
       <Image
-        src="/Logo.jpeg"
+        src="/Logo Seedly.png"
         alt="Seedly Technology & Apps"
         width={dimension}
         height={dimension}
