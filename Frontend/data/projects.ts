@@ -58,7 +58,6 @@ export const projects: Project[] = [
     featured: true,
     year: 2025,
     isDemo: false,
-    liveUrl: "https://www.saadpoisson.com",
   },
   {
     id: "proj-003",
