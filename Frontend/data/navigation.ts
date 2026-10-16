@@ -4,12 +4,12 @@ import type { NavLink } from "@/types";
 // NAVIGATION — Liens centralisés
 // =============================================
 
-export const mainNavLinks: NavLink[] = [
-  { label: "Accueil", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Réalisations", href: "/realisations" },
-  { label: "À propos", href: "/a-propos" },
-  { label: "Contact", href: "/contact" },
+export const mainNavLinks = [
+  { label: "Accueil",     href: "/",            key: "home" },
+  { label: "Services",    href: "/services",    key: "services" },
+  { label: "Réalisations",href: "/realisations",key: "portfolio" },
+  { label: "À propos",    href: "/a-propos",    key: "about" },
+  { label: "Contact",     href: "/contact",     key: "contact" },
 ];
 
 export const footerLinks = {

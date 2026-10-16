@@ -7,9 +7,11 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { mainNavLinks } from "@/data/navigation";
 import { cn } from "@/lib/utils";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export const Header: React.FC = () => {
   const pathname = usePathname();
+  const { locale, toggleLocale, t } = useLanguage();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -59,7 +61,7 @@ export const Header: React.FC = () => {
                     )}
                     aria-current={isActive(link.href) ? "page" : undefined}
                   >
-                    {link.label}
+                    {t.nav[link.key as keyof typeof t.nav] ?? link.label}
                     {isActive(link.href) && (
                       <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 rounded-full bg-[#4169E1]" aria-hidden="true" />
                     )}
@@ -69,8 +71,18 @@ export const Header: React.FC = () => {
             </ul>
 
             <div className="hidden lg:flex items-center gap-3">
+              {/* Bouton langue */}
+              <button
+                type="button"
+                onClick={toggleLocale}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 text-xs font-semibold text-[#9A9A93] hover:text-white hover:border-white/20 transition-all duration-200"
+                aria-label={locale === "fr" ? "Switch to English" : "Passer en français"}
+              >
+                <span className="text-base">{locale === "fr" ? "🇬🇧" : "🇫🇷"}</span>
+                {locale === "fr" ? "EN" : "FR"}
+              </button>
               <Link href="/devis" className="btn-primary btn-md inline-flex items-center gap-2">
-                Demander un devis
+                {t.nav.cta}
                 <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
             </div>
@@ -127,12 +139,20 @@ export const Header: React.FC = () => {
             </ul>
           </nav>
           <div className="px-4 pb-8 pt-4 border-t border-white/8 space-y-3">
+            <button
+              type="button"
+              onClick={toggleLocale}
+              className="flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-xl border border-white/10 text-sm font-semibold text-[#9A9A93] hover:text-white hover:border-white/20 transition-all"
+            >
+              <span className="text-base">{locale === "fr" ? "🇬🇧" : "🇫🇷"}</span>
+              {locale === "fr" ? "Switch to English" : "Passer en français"}
+            </button>
             <Link href="/devis" className="btn-primary btn-lg w-full inline-flex items-center justify-center gap-2">
-              Demander un devis
+              {t.nav.cta}
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
             <Link href="/contact" className="btn-outline btn-md w-full inline-flex items-center justify-center">
-              Nous contacter
+              {t.nav.contact}
             </Link>
           </div>
         </div>

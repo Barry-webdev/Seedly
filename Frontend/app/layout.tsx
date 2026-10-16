@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
+import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import "./globals.css";
 
 // =============================================
@@ -99,7 +100,9 @@ export default function RootLayout({
   return (
     <html lang="fr" className={geist.variable} suppressHydrationWarning>
       <body className="bg-[#0A0B0E] text-[#F4F3EF] antialiased min-h-screen">
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

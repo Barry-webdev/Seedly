@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
@@ -5,6 +7,7 @@ import { Logo } from "@/components/ui/Logo";
 import { contactInfo } from "@/data/contact";
 import { footerLinks } from "@/data/navigation";
 import { companyInfo } from "@/data/company";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const SocialIcon: React.FC<{ platform: string }> = ({ platform }) => {
   const icons: Record<string, React.ReactNode> = {
@@ -34,6 +37,7 @@ const SocialIcon: React.FC<{ platform: string }> = ({ platform }) => {
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
 
   return (
     <footer className="bg-[#202326] text-white" role="contentinfo">
@@ -66,7 +70,7 @@ export const Footer: React.FC = () => {
 
           {/* Services */}
           <div className="space-y-5">
-            <h3 className="text-xs font-semibold text-white uppercase tracking-widest">Services</h3>
+            <h3 className="text-xs font-semibold text-[#F4F3EF] uppercase tracking-widest">{t.footer.services}</h3>
             <ul className="space-y-3" role="list">
               {footerLinks.services.map((link) => (
                 <li key={link.href}>
@@ -80,7 +84,7 @@ export const Footer: React.FC = () => {
 
           {/* Entreprise */}
           <div className="space-y-5">
-            <h3 className="text-xs font-semibold text-white uppercase tracking-widest">Entreprise</h3>
+            <h3 className="text-xs font-semibold text-[#F4F3EF] uppercase tracking-widest">{t.footer.company}</h3>
             <ul className="space-y-3" role="list">
               {footerLinks.company.map((link) => (
                 <li key={link.href}>
@@ -94,7 +98,7 @@ export const Footer: React.FC = () => {
 
           {/* Contact */}
           <div className="space-y-5">
-            <h3 className="text-xs font-semibold text-white uppercase tracking-widest">Contact</h3>
+            <h3 className="text-xs font-semibold text-[#F4F3EF] uppercase tracking-widest">{t.footer.contact}</h3>
             <ul className="space-y-3.5" role="list">
               <li>
                 <a href={`mailto:${contactInfo.email}`} className="flex items-start gap-3 text-sm text-[#9A9A93] hover:text-white transition-colors group">
@@ -137,11 +141,11 @@ export const Footer: React.FC = () => {
         <div className="container-seedly py-10">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-5 p-6 rounded-2xl bg-[#4169E1]">
             <div>
-              <p className="font-semibold text-white text-lg">{companyInfo.taglineFr}</p>
-              <p className="text-blue-100/80 text-sm mt-1">Parlez-nous de votre projet, nous vous répondons rapidement.</p>
+              <p className="font-semibold text-[#F4F3EF] text-lg">{t.footer.tagline}</p>
+              <p className="text-blue-100/80 text-sm mt-1">{t.footer.taglineDesc}</p>
             </div>
             <a href="/devis" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#4169E1] font-semibold text-sm hover:bg-[#F4F3EF] transition-colors shrink-0">
-              Démarrer un projet
+              {t.footer.startProject}
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </a>
           </div>
@@ -153,7 +157,7 @@ export const Footer: React.FC = () => {
         <div className="container-seedly py-5">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <p className="text-xs text-[#62666A]">
-              © {currentYear} {companyInfo.name}. Tous droits réservés.
+              © {currentYear} {companyInfo.name}. {t.footer.rights}
             </p>
             <ul className="flex items-center gap-5" role="list">
               {footerLinks.legal.map((link) => (
