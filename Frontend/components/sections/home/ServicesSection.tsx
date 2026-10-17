@@ -1,8 +1,11 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 import { Monitor, Smartphone, PenTool, TrendingUp, ArrowRight } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { services } from "@/data/services";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const serviceIcons: Record<string, React.ReactNode> = {
   monitor:       <Monitor className="w-6 h-6" />,
@@ -12,13 +15,15 @@ const serviceIcons: Record<string, React.ReactNode> = {
 };
 
 export const ServicesSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="section-padding bg-[#0A0B0E]" aria-labelledby="services-title">
       <div className="container-seedly">
         <SectionHeader
-          label="Ce que nous faisons"
-          title="Des solutions numériques pour faire grandir votre activité"
-          description="Que vous soyez entrepreneur, commerçant, école ou organisation — nous concevons les outils digitaux adaptés à vos besoins et à votre budget."
+          label={t.sections.whatWeDo}
+          title={t.services.title}
+          description={t.services.description}
         />
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -51,7 +56,7 @@ export const ServicesSection: React.FC = () => {
                   ))}
                 </ul>
                 <div className="flex items-center gap-2 text-sm font-medium text-[#9A9A93] group-hover:text-[#7F9FF1] transition-colors pt-2 border-t border-white/8">
-                  <span>En savoir plus</span>
+                  <span>{t.services.learnMore}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </div>
               </div>
@@ -61,11 +66,11 @@ export const ServicesSection: React.FC = () => {
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/services" className="btn-outline btn-md inline-flex items-center gap-2">
-            Voir tous les services
+            {t.services.viewAll}
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
           <Link href="/devis" className="btn-primary btn-md inline-flex items-center gap-2">
-            Demander un devis
+            {t.nav.cta}
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>

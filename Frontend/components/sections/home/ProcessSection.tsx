@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import { Search, Target, PenTool, Code2, CheckCircle, Rocket } from "lucide-react";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { workSteps } from "@/data/company";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const stepIcons: Record<string, React.ReactNode> = {
   search:         <Search className="w-5 h-5" />,
@@ -13,13 +16,15 @@ const stepIcons: Record<string, React.ReactNode> = {
 };
 
 export const ProcessSection: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <section className="section-padding bg-[#0A0B0E]" aria-labelledby="process-title">
       <div className="container-seedly">
         <SectionHeader
-          label="Notre méthode"
-          title="Comment nous travaillons ensemble"
-          description="Un processus structuré pour livrer des résultats prévisibles, dans les délais convenus."
+          label={t.sections.ourMethod}
+          title={t.process.title}
+          description={t.process.description}
         />
 
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -32,23 +37,23 @@ export const ProcessSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-xl bg-[#4169E1]/10 flex items-center justify-center text-[#7F9FF1] group-hover:bg-[#4169E1] group-hover:text-white transition-all duration-300">
                   {stepIcons[step.icon] ?? <Search className="w-5 h-5" />}
                 </div>
-                <span className="text-xs font-mono font-bold text-[#9A9A93]">Étape {step.number}</span>
+                <span className="text-xs font-mono font-bold text-[#9A9A93]">
+                  {t.process.stepLabel} {step.number}
+                </span>
               </div>
               <h3 className="text-base font-bold text-[#F4F3EF]">{step.title}</h3>
               <p className="text-sm text-[#9A9A93] leading-relaxed">{step.description}</p>
               {step.duration && (
                 <div className="pt-2 border-t border-white/8">
                   <span className="text-xs text-[#9A9A93]">
-                    Durée estimée : <span className="text-[#9A9A93]">{step.duration}</span>
+                    {t.process.durationLabel} : <span className="text-[#F4F3EF]">{step.duration}</span>
                   </span>
                 </div>
               )}
             </div>
           ))}
         </div>
-        <p className="mt-8 text-center text-sm text-[#9A9A93]">
-          Les délais varient selon la complexité du projet. Chaque engagement est précisé dans le devis.
-        </p>
+        <p className="mt-8 text-center text-sm text-[#9A9A93]">{t.process.note}</p>
       </div>
     </section>
   );
