@@ -17,8 +17,8 @@ export const ServicesSection: React.FC = () => {
       <div className="container-seedly">
         <SectionHeader
           label="Ce que nous faisons"
-          title="Des solutions digitales pour chaque besoin"
-          description="De la création de votre site web à la gestion de votre présence en ligne, nous vous accompagnons à chaque étape de votre développement digital."
+          title="Des solutions numériques pour faire grandir votre activité"
+          description="Que vous soyez entrepreneur, commerçant, école ou organisation — nous concevons les outils digitaux adaptés à vos besoins et à votre budget."
         />
 
         <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -59,9 +59,13 @@ export const ServicesSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-10 text-center">
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link href="/services" className="btn-outline btn-md inline-flex items-center gap-2">
             Voir tous les services
+            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+          </Link>
+          <Link href="/devis" className="btn-primary btn-md inline-flex items-center gap-2">
+            Demander un devis
             <ArrowRight className="w-4 h-4" aria-hidden="true" />
           </Link>
         </div>

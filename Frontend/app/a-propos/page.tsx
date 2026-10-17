@@ -7,9 +7,9 @@ import { ProcessSection } from "@/components/sections/home/ProcessSection";
 import { companyInfo, companyValues, teamMembers } from "@/data/company";
 
 export const metadata: Metadata = {
-  title: "À propos de Seedly",
+  title: "À propos — Seedly Technology & Apps",
   description:
-    "Découvrez Seedly Technology & Apps, agence digitale basée à Conakry. Notre histoire, notre mission, nos valeurs et notre équipe.",
+    "Découvrez Seedly Technology & Apps, agence digitale basée à Conakry, Guinée. Notre mission : transformer vos idées en solutions numériques performantes. Rencontrez notre équipe et notre approche.",
 };
 
 const valueIcons: Record<string, React.ReactNode> = {
@@ -48,7 +48,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Mission & Vision ─────────────────────────────── */}
-      <section className="section-padding-sm bg-surface/50" aria-labelledby="mission-title">
+      <section className="section-padding-sm bg-[#0D1018]" aria-labelledby="mission-title">
         <div className="container-seedly">
           <div className="grid lg:grid-cols-2 gap-6">
             <div className="card-seedly p-8 space-y-4">
@@ -92,7 +92,7 @@ export default function AboutPage() {
       </section>
 
       {/* ── Valeurs ──────────────────────────────────────── */}
-      <section id="valeurs" className="section-padding bg-surface/50" aria-labelledby="values-title">
+      <section id="valeurs" className="section-padding bg-[#0D1018]" aria-labelledby="values-title">
         <div className="container-seedly">
           <SectionHeader
             label="Nos valeurs"

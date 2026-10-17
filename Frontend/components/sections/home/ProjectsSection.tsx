@@ -15,7 +15,7 @@ export const ProjectsSection: React.FC = () => {
           <SectionHeader
             label="Nos réalisations"
             title="Ce que nous avons construit"
-            description="Un aperçu de nos projets récents."
+            description="Des projets concrets livrés à des clients réels. Chaque réalisation illustre notre engagement pour la qualité."
             align="left"
           />
           <Link href="/realisations" className="btn-outline btn-sm shrink-0 inline-flex items-center gap-2">

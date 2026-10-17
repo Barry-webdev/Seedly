@@ -51,8 +51,9 @@ export const HeroSection: React.FC = () => {
               {t.hero.ctaPrimary}
               <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>
-            <Link href="/services" className="btn-outline btn-lg inline-flex items-center gap-2">
+            <Link href="/realisations" className="btn-outline btn-lg inline-flex items-center gap-2">
               {t.hero.ctaSecondary}
+              <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </Link>
           </div>
 

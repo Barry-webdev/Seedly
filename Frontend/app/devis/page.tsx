@@ -3,9 +3,9 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { QuoteForm } from "@/components/forms/QuoteForm";
 
 export const metadata: Metadata = {
-  title: "Demander un devis",
+  title: "Demander un devis gratuit — Seedly Technology & Apps",
   description:
-    "Décrivez votre projet à Seedly Technology & Apps et recevez un devis personnalisé. Site web, application mobile, design ou marketing digital.",
+    "Décrivez votre projet à Seedly Technology & Apps et recevez un devis personnalisé sous 24h. Site web, application mobile, design ou marketing digital. Sans engagement.",
 };
 
 export default function DevisPage() {

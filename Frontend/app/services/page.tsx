@@ -7,9 +7,9 @@ import { CTASection } from "@/components/sections/home/CTASection";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Nos services",
+  title: "Nos services — Sites web, apps mobiles, design & marketing",
   description:
-    "Découvrez tous les services de Seedly Technology & Apps : création de sites web, développement d'applications mobiles, design UI/UX et marketing digital à Conakry.",
+    "Seedly Technology & Apps à Conakry propose la création de sites web, le développement d'applications mobiles, le design UI/UX et le marketing digital pour les entreprises guinéennes.",
 };
 
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -33,11 +33,11 @@ export default function ServicesPage() {
               <span className="w-5 h-px bg-[#4169E1]" aria-hidden="true" />
             </div>
             <h1 id="services-page-title" className="section-title text-4xl md:text-5xl">
-              Nos services
+              Des solutions numériques pour votre entreprise
             </h1>
             <p className="section-description text-center mx-auto">
-              Des solutions digitales complètes pour accompagner votre entreprise dans sa
-              transformation numérique, de la stratégie à la mise en ligne.
+              Sites web, applications mobiles, design et marketing digital — des solutions
+              concrètes pour aider votre entreprise à se développer et à attirer plus de clients.
             </p>
           </div>
         </div>

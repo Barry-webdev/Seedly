@@ -4,9 +4,9 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import { contactInfo, whatsappCTA } from "@/data/contact";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Contact — Discutons de votre projet",
   description:
-    "Contactez Seedly Technology & Apps à Conakry. Email, téléphone, WhatsApp ou formulaire — nous vous répondons rapidement.",
+    "Contactez Seedly Technology & Apps à Conakry, Guinée. WhatsApp, email ou formulaire — nous répondons sous 24h. Première consultation gratuite et sans engagement.",
 };
 
 const SocialIcon: React.FC<{ platform: string }> = ({ platform }) => {
