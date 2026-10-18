@@ -39,7 +39,11 @@ export default function AboutPage() {
             <h1 id="about-title" className="section-title text-4xl md:text-5xl lg:text-6xl">
               {t.about.title}
             </h1>
-            <p className="section-description text-lg">{companyInfo.description}</p>
+            <p className="section-description text-lg">
+              {locale === "en"
+                ? "Seedly is a technology agency based in Conakry that helps businesses build their digital presence and accelerate their growth through custom digital solutions."
+                : companyInfo.description}
+            </p>
           </div>
         </div>
       </section>
@@ -51,12 +55,20 @@ export default function AboutPage() {
             <div className="card-seedly p-8 space-y-4">
               <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 flex items-center justify-center text-2xl">🌱</div>
               <h2 id="mission-title" className="text-xl font-bold text-[#F4F3EF]">{t.about.mission}</h2>
-              <p className="text-[#9A9A93] leading-relaxed">{companyInfo.mission}</p>
+              <p className="text-[#9A9A93] leading-relaxed">
+                {locale === "en"
+                  ? "To support Guinean businesses in their digital transformation by offering accessible, high-performing solutions adapted to their context."
+                  : companyInfo.mission}
+              </p>
             </div>
             <div className="card-seedly p-8 space-y-4">
               <div className="w-10 h-10 rounded-xl bg-[#4169E1]/15 flex items-center justify-center text-2xl">🎯</div>
               <h2 className="text-xl font-bold text-[#F4F3EF]">{t.about.vision}</h2>
-              <p className="text-[#9A9A93] leading-relaxed">{companyInfo.vision}</p>
+              <p className="text-[#9A9A93] leading-relaxed">
+                {locale === "en"
+                  ? "To become the go-to technology partner for businesses in Guinea and West Africa, planting a digital seed in every business that wants to grow."
+                  : companyInfo.vision}
+              </p>
             </div>
           </div>
         </div>
