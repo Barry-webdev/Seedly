@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { whatsappCTA } from "@/data/contact";
 
@@ -60,7 +61,7 @@ export const HeroSection: React.FC = () => {
           <div className="flex justify-center mt-6">
             <a href={whatsappCTA()} target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-[#9A9A93] hover:text-[#F4F3EF] transition-colors">
-              <MessageCircle className="w-4 h-4 text-green-500" aria-hidden="true" />
+              <WhatsAppIcon className="w-4 h-4 text-green-500" />
               {t.hero.whatsapp}
               <ArrowRight className="w-3 h-3" aria-hidden="true" />
             </a>

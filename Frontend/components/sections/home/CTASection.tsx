@@ -2,7 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 import { whatsappCTA } from "@/data/contact";
 
@@ -34,7 +35,7 @@ export const CTASection: React.FC = () => {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-[#F4F3EF] border border-white/15 hover:bg-white/5 transition-all duration-200"
                 >
-                  <MessageCircle className="w-5 h-5 text-green-400" aria-hidden="true" />
+                  <WhatsAppIcon className="w-5 h-5 text-green-400" />
                   {t.cta.whatsapp}
                 </a>
               </div>

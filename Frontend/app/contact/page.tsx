@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Mail, Phone, MapPin, MessageCircle, Clock, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, ArrowRight } from "lucide-react";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { contactInfo, whatsappCTA } from "@/data/contact";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 
 export const metadata: Metadata = {
   title: "Contact — Discutons de votre projet",
@@ -82,7 +83,7 @@ export default function ContactPage() {
                     className="flex items-start gap-4 p-5 rounded-2xl border border-green-500/20 bg-green-500/5 hover:bg-green-500/10 transition-all duration-200 group"
                   >
                     <div className="w-10 h-10 rounded-xl bg-green-500/15 flex items-center justify-center shrink-0">
-                      <MessageCircle className="w-5 h-5 text-green-400" aria-hidden="true" />
+                      <WhatsAppIcon className="w-5 h-5 text-green-400" />
                     </div>
                     <div>
                       <p className="font-semibold text-[#F4F3EF] text-sm group-hover:text-green-400 transition-colors">
@@ -216,7 +217,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="btn-outline btn-md w-full group"
               >
-                <MessageCircle className="w-4 h-4 text-green-400" aria-hidden="true" />
+                <WhatsAppIcon className="w-4 h-4 text-green-400" />
                 Écrire sur WhatsApp
               </a>
 
